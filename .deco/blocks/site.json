@@ -1,14 +1,14 @@
 {
   "seo": {
     "type": "website",
-    "title": "Landing",
+    "title": "Deriva",
     "jsonLDs": [],
     "noIndexing": false,
-    "description": "Improve your page performance with deco.cx",
-    "titleTemplate": "Landing | deco.cx",
-    "descriptionTemplate": "%s | Deco.cx",
-    "favicon": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/4763/0fba8a8c-ee79-47e1-8f9d-863658d056cc",
-    "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/4763/1350f37f-88ab-4cf1-bcf6-c386bcf8b238"
+    "description": "O Deriva busca combater a pesca fantasma através de um sistema regenerativo, recuperando redes de pesca que seriam descartadas no oceano ou na terra. Articulamos comunidades pesqueiras e a indústria para transformar esse material em pellets de nylon reciclado de alta-performance.",
+    "titleTemplate": "%s | Regenerando o oceano, transformando marcas",
+    "descriptionTemplate": "%s | Deriva",
+    "favicon": "https://assets.decocache.com/deriva-earth/1c0c595e-7f94-4c55-9677-8b0e31cb99e5/logo2-insta.png",
+    "image": "https://assets.decocache.com/deriva-earth/213472c4-908d-4526-b7ee-17cbe04baa3c/seo_banner_deriva.png"
   },
   "global": [
     {
