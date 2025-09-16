@@ -2,36 +2,60 @@
 // This file SHOULD be checked into source version control.
 // This file is automatically updated during development when running `dev.ts`.
 
+import * as $$$$$$$$$0 from "./actions/contactFormConvex.ts";
+import * as $$$$$$$$$1 from "./actions/contactFormConvexFixed.ts";
+import * as $$$$$$$$$2 from "./actions/submitToConvex.ts";
 import * as $$$$$$$$$$$0 from "./apps/deco/blog.ts";
 import * as $$$$$$$$$$$1 from "./apps/deco/htmx.ts";
 import * as $$$$$$$$$$$2 from "./apps/site.ts";
-import * as $$$$$$0 from "./sections/BlogPosts.tsx";
-import * as $$$$$$1 from "./sections/Faq.tsx";
-import * as $$$$$$2 from "./sections/Footer.tsx";
-import * as $$$$$$3 from "./sections/Header.tsx";
-import * as $$$$$$9 from "./sections/hero-1.tsx";
-import * as $$$$$$10 from "./sections/hero-2.tsx";
-import * as $$$$$$4 from "./sections/Hero.tsx";
-import * as $$$$$$11 from "./sections/hero2.tsx";
-import * as $$$$$$5 from "./sections/ImageWithParagraph.tsx";
-import * as $$$$$$6 from "./sections/Logos.tsx";
-import * as $$$$$$7 from "./sections/Testimonials.tsx";
-import * as $$$$$$8 from "./sections/Theme/Theme.tsx";
+import * as $$$$$$0 from "./sections/Benefits.tsx";
+import * as $$$$$$1 from "./sections/BlogPosts.tsx";
+import * as $$$$$$2 from "./sections/ContactFormHybrid.tsx";
+import * as $$$$$$3 from "./sections/Derivative.tsx";
+import * as $$$$$$4 from "./sections/Faq.tsx";
+import * as $$$$$$5 from "./sections/Footer.tsx";
+import * as $$$$$$7 from "./sections/Header_default.tsx";
+import * as $$$$$$6 from "./sections/Header.tsx";
+import * as $$$$$$17 from "./sections/hero-1.tsx";
+import * as $$$$$$18 from "./sections/hero-2.tsx";
+import * as $$$$$$8 from "./sections/Hero.tsx";
+import * as $$$$$$19 from "./sections/hero2.tsx";
+import * as $$$$$$9 from "./sections/ImageWithParagraph.tsx";
+import * as $$$$$$10 from "./sections/Logos.tsx";
+import * as $$$$$$11 from "./sections/Mission.tsx";
+import * as $$$$$$12 from "./sections/NetworkRecoverySteps.tsx";
+import * as $$$$$$13 from "./sections/Services.tsx";
+import * as $$$$$$14 from "./sections/Supporters.tsx";
+import * as $$$$$$15 from "./sections/Theme/Theme.tsx";
+import * as $$$$$$16 from "./sections/UnicornStudioEffect.tsx";
 
 const manifest = {
   "sections": {
-    "site/sections/BlogPosts.tsx": $$$$$$0,
-    "site/sections/Faq.tsx": $$$$$$1,
-    "site/sections/Footer.tsx": $$$$$$2,
-    "site/sections/Header.tsx": $$$$$$3,
-    "site/sections/hero-1.tsx": $$$$$$9,
-    "site/sections/hero-2.tsx": $$$$$$10,
-    "site/sections/Hero.tsx": $$$$$$4,
-    "site/sections/hero2.tsx": $$$$$$11,
-    "site/sections/ImageWithParagraph.tsx": $$$$$$5,
-    "site/sections/Logos.tsx": $$$$$$6,
-    "site/sections/Testimonials.tsx": $$$$$$7,
-    "site/sections/Theme/Theme.tsx": $$$$$$8,
+    "site/sections/Benefits.tsx": $$$$$$0,
+    "site/sections/BlogPosts.tsx": $$$$$$1,
+    "site/sections/ContactFormHybrid.tsx": $$$$$$2,
+    "site/sections/Derivative.tsx": $$$$$$3,
+    "site/sections/Faq.tsx": $$$$$$4,
+    "site/sections/Footer.tsx": $$$$$$5,
+    "site/sections/Header_default.tsx": $$$$$$7,
+    "site/sections/Header.tsx": $$$$$$6,
+    "site/sections/hero-1.tsx": $$$$$$17,
+    "site/sections/hero-2.tsx": $$$$$$18,
+    "site/sections/Hero.tsx": $$$$$$8,
+    "site/sections/hero2.tsx": $$$$$$19,
+    "site/sections/ImageWithParagraph.tsx": $$$$$$9,
+    "site/sections/Logos.tsx": $$$$$$10,
+    "site/sections/Mission.tsx": $$$$$$11,
+    "site/sections/NetworkRecoverySteps.tsx": $$$$$$12,
+    "site/sections/Services.tsx": $$$$$$13,
+    "site/sections/Supporters.tsx": $$$$$$14,
+    "site/sections/Theme/Theme.tsx": $$$$$$15,
+    "site/sections/UnicornStudioEffect.tsx": $$$$$$16,
+  },
+  "actions": {
+    "site/actions/contactFormConvex.ts": $$$$$$$$$0,
+    "site/actions/contactFormConvexFixed.ts": $$$$$$$$$1,
+    "site/actions/submitToConvex.ts": $$$$$$$$$2,
   },
   "apps": {
     "site/apps/deco/blog.ts": $$$$$$$$$$$0,

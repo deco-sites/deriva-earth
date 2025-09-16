@@ -1,11 +1,13 @@
 {
   "imports": {
-    "$fresh/": "https://deno.land/x/fresh@1.6.8/",
+    "deco/": "https://cdn.jsdelivr.net/gh/deco-cx/deco@1.103.0/",
+    "apps/": "https://cdn.jsdelivr.net/gh/deco-cx/apps@0.118.0/",
+    "$fresh/": "https://deno.land/x/fresh@1.7.3/",
     "@cliffy/prompt": "jsr:@cliffy/prompt@^1.0.0-rc.5",
-    "@core/asyncutil": "jsr:@core/asyncutil@^1.0.2",
+    "@core/asyncutil": "jsr:@core/asyncutil@^1.0.0",
     "@deco/codemod-toolkit": "jsr:@deco/codemod-toolkit@0.3.4",
     "@deco/durable": "jsr:@deco/durable@0.5.3",
-    "@deco/warp": "jsr:@deco/warp@0.3.8",
+    "@deco/warp": "jsr:@deco/warp@0.3.10",
     "@hono/hono": "jsr:@hono/hono@^4.5.4",
     "@std/assert": "jsr:@std/assert@^1.0.2",
     "@std/async": "jsr:@std/async@^0.224.1",
@@ -26,20 +28,19 @@
     "@std/testing": "jsr:@std/testing@^1.0.0",
     "@zaubrik/djwt": "jsr:@zaubrik/djwt@^3.0.2",
     "fast-json-patch": "npm:fast-json-patch@^3.1.1",
-    "partytown/": "https://deno.land/x/partytown@0.4.8/",
-    "preact": "npm:preact@10.23.1",
     "preact-render-to-string": "npm:preact-render-to-string@6.4.2",
     "simple-git": "npm:simple-git@^3.25.0",
-    "std/": "https://deno.land/std@0.190.0/",
+    "https://esm.sh/*preact-render-to-string@6.3.1": "npm:preact-render-to-string@6.4.2",
+    "@deco/deco": "jsr:@deco/deco@1.103.0",
     "site/": "./",
-    "deco/": "https://cdn.jsdelivr.net/gh/deco-cx/deco@1.104.2/",
-    "apps/": "https://cdn.jsdelivr.net/gh/deco-cx/apps@0.60.0/",
     "@preact/signals": "https://esm.sh/*@preact/signals@1.2.2",
     "@preact/signals-core": "https://esm.sh/*@preact/signals-core@1.5.1",
     "daisyui": "npm:daisyui@4.4.19",
-    "https://esm.sh/*preact-render-to-string@6.3.1": "npm:preact-render-to-string@6.4.2",
-    "@deco/deco": "jsr:@deco/deco@1.104.2",
-    "@deco/dev": "jsr:@deco/dev@1.104.0"
+    "preact": "npm:preact@10.23.1",
+    "std/": "https://deno.land/std@0.204.0/",
+    "@deco/dev": "jsr:@deco/dev@1.120.11",
+    "convex/": "https://esm.sh/convex@^1.0.0/",
+    "convex/browser": "https://esm.sh/convex@^1.0.0/browser"
   },
   "tasks": {
     "start": "deno run -A --unstable-http --env https://deco.cx/run -- deno task dev",
@@ -55,8 +56,9 @@
     "cache_clean": "rm deno.lock; deno cache -r main.ts",
     "build": "deno run -A dev.ts build",
     "preview": "deno run -A main.ts",
-    "dev": "deno run -A --env --unstable --unstable-hmr dev.ts",
-    "reload": "deno cache -r https://deco.cx/run"
+    "dev": "deno run -A --env --unstable-kv --unstable-hmr dev.ts",
+    "reload": "deno cache -r https://deco.cx/run",
+    "convex:dev": "npx convex dev --once"
   },
   "githooks": {
     "pre-commit": "check"
@@ -66,8 +68,7 @@
     "static/",
     "README.md",
     "_fresh",
-    "**/_fresh/*",
-    ".deco/**"
+    "**/_fresh/*"
   ],
   "lint": {
     "rules": {

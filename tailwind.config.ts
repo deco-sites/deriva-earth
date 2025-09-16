@@ -7,6 +7,15 @@ export default {
   theme: {
     container: { center: true },
     extend: {
+      fontFamily: {
+        'sans': ['Inter', 'system-ui', 'sans-serif'],
+        'mono': ['Geist Mono', 'Monaco', 'Cascadia Code', 'Roboto Mono', 'Consolas', 'Courier New', 'monospace'],
+      },
+      colors: {
+        'mineral-black': '#1D1B1D',
+        'snow-white': '#FCFAFA',
+        'fog-gray': '#CEC8C1',
+      },
       animation: {
         sliding: "sliding 30s linear infinite",
       },

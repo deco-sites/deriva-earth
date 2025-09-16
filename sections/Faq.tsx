@@ -1,3 +1,5 @@
+import Icon from "site/components/ui/Icon.tsx";
+
 export interface CTA {
   id?: string;
   href: string;
@@ -19,79 +21,129 @@ export interface Props {
 }
 
 export default function BlogPosts({
-  title = "FAQs",
-  description =
-    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique.",
-  cta = { id: "change-me", href: "/", text: "Change me", outline: true },
+  title = "Perguntas frequentes",
+  description = "",
+  cta,
   questions = [
     {
-      title: "Question #1 text goes here",
+      title: "Qual é a história por trás do Derivative®?",
       answer:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut vestibulum ligula. Nam et tellus sit amet magna convallis interdum. Integer fermentum ligula nec velit hendrerit, quis feugiat odio feugiat. Ut vel nisi auctor, rhoncus felis vitae, tempor metus. Fusce ut lectus et ex consectetur ullamcorper. Nulla facilisi. Proin ullamcorper, odio a consectetur posuere, mauris felis rutrum lectus, et convallis est risus vitae nisi. Suspendisse potenti. Donec ultricies consectetur lorem, eget tempor nisi cursus in. Vivamus at nulla eros. Sed nec malesuada mauris. Curabitur id ex sed neque rutrum tincidunt. Sed sed lectus nec libero eleifend luctus. Aenean convallis feugiat elit, non tincidunt eros vehicula sed. Phasellus pretium urna sit amet risus interdum tempor.",
+        "O Derivative® é a matéria-prima exclusiva do Deriva, feita a partir da reciclagem da poliamida de redes de pesca pós-consumo e resíduos têxteis pré-consumo. É versátil, de alto valor e propósito, podendo ser aplicado em setores como moda, acessórios e produtos esportivos. Cada lote é 100% rastreável e conectado à sua origem.",
     },
     {
-      title: "Question #2 text goes here",
+      title: "Quando o Deriva começou?",
       answer:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut vestibulum ligula. Nam et tellus sit amet magna convallis interdum. Integer fermentum ligula nec velit hendrerit, quis feugiat odio feugiat. Ut vel nisi auctor, rhoncus felis vitae, tempor metus. Fusce ut lectus et ex consectetur ullamcorper. Nulla facilisi. Proin ullamcorper, odio a consectetur posuere, mauris felis rutrum lectus, et convallis est risus vitae nisi. Suspendisse potenti. Donec ultricies consectetur lorem, eget tempor nisi cursus in. Vivamus at nulla eros. Sed nec malesuada mauris. Curabitur id ex sed neque rutrum tincidunt. Sed sed lectus nec libero eleifend luctus. Aenean convallis feugiat elit, non tincidunt eros vehicula sed. Phasellus pretium urna sit amet risus interdum tempor.",
+        "O Deriva nasceu em 2022 como pesquisa acadêmica e projeto de campo junto a comunidades pesqueiras do Rio de Janeiro. Desde então, fomos evoluindo o modelo e validando hipóteses. Em 2025 iniciamos oficialmente as operações como negócio de impacto, e estamos implementando os primeiros projetos e encontrando early-adopters que compartilham do nosso propósito.",
     },
     {
-      title: "Question #3 text goes here",
+      title: "O Derivative vem de redes fantasmas?",
       answer:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut vestibulum ligula. Nam et tellus sit amet magna convallis interdum. Integer fermentum ligula nec velit hendrerit, quis feugiat odio feugiat. Ut vel nisi auctor, rhoncus felis vitae, tempor metus. Fusce ut lectus et ex consectetur ullamcorper. Nulla facilisi. Proin ullamcorper, odio a consectetur posuere, mauris felis rutrum lectus, et convallis est risus vitae nisi. Suspendisse potenti. Donec ultricies consectetur lorem, eget tempor nisi cursus in. Vivamus at nulla eros. Sed nec malesuada mauris. Curabitur id ex sed neque rutrum tincidunt. Sed sed lectus nec libero eleifend luctus. Aenean convallis feugiat elit, non tincidunt eros vehicula sed. Phasellus pretium urna sit amet risus interdum tempor.",
+        "Nosso foco é interceptar redes antes que virem fantasmas, evitando que cheguem ao mar e causem danos irreversíveis à vida oceânica. Para isso, criamos um sistema de incentivo financeiro ao descarte correto junto às colônias de pesca. Assim, transformamos um passivo em recurso, reduzindo riscos e fortalecendo comunidades pesqueiras.",
     },
     {
-      title: "Question #4 text goes here",
+      title: "Como funciona a parceria com marcas?",
       answer:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut vestibulum ligula. Nam et tellus sit amet magna convallis interdum. Integer fermentum ligula nec velit hendrerit, quis feugiat odio feugiat. Ut vel nisi auctor, rhoncus felis vitae, tempor metus. Fusce ut lectus et ex consectetur ullamcorper. Nulla facilisi. Proin ullamcorper, odio a consectetur posuere, mauris felis rutrum lectus, et convallis est risus vitae nisi. Suspendisse potenti. Donec ultricies consectetur lorem, eget tempor nisi cursus in. Vivamus at nulla eros. Sed nec malesuada mauris. Curabitur id ex sed neque rutrum tincidunt. Sed sed lectus nec libero eleifend luctus. Aenean convallis feugiat elit, non tincidunt eros vehicula sed. Phasellus pretium urna sit amet risus interdum tempor.",
-    },
-    {
-      title: "Question #5 text goes here",
-      answer:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut vestibulum ligula. Nam et tellus sit amet magna convallis interdum. Integer fermentum ligula nec velit hendrerit, quis feugiat odio feugiat. Ut vel nisi auctor, rhoncus felis vitae, tempor metus. Fusce ut lectus et ex consectetur ullamcorper. Nulla facilisi. Proin ullamcorper, odio a consectetur posuere, mauris felis rutrum lectus, et convallis est risus vitae nisi. Suspendisse potenti. Donec ultricies consectetur lorem, eget tempor nisi cursus in. Vivamus at nulla eros. Sed nec malesuada mauris. Curabitur id ex sed neque rutrum tincidunt. Sed sed lectus nec libero eleifend luctus. Aenean convallis feugiat elit, non tincidunt eros vehicula sed. Phasellus pretium urna sit amet risus interdum tempor.",
+        "Oferecemos três frentes de colaboração: fornecimento do Derivative®, co-criação de soluções através do Deriva Way e o Own your Derivative® que transforma resíduos têxteis da própria marca em um Derivative® exclusivo.",
     },
   ],
 }: Props) {
   return (
-    <div class="lg:container md:max-w-6xl lg:mx-auto mx-4 text-sm py-12 lg:py-28">
-      <div class="flex flex-col lg:flex-row gap-10 lg:gap-20 justify-between">
+    <div class="container lg:mx-auto px-4 lg:px-0 text-sm py-12 lg:py-28 max-w-7xl" style="overflow-x: hidden !important;">
+      <style dangerouslySetInnerHTML={{
+        __html: `
+          .faq-border-gradient {
+            border-image: linear-gradient(90deg, rgba(255, 255, 255, 0.7) 0%, rgba(255, 255, 255, 0.2) 100%) 1 !important;
+          }
+          .faq-border-gradient-top {
+            border-top: 1px solid;
+            border-image: linear-gradient(90deg, rgba(255, 255, 255, 0.7) 0%, rgba(255, 255, 255, 0.2) 100%) 1 !important;
+          }
+          .faq-border-gradient-bottom {
+            border-bottom: 1px solid;
+            border-image: linear-gradient(90deg, rgba(255, 255, 255, 0.7) 0%, rgba(255, 255, 255, 0.2) 100%) 1 !important;
+          }
+          @media (max-width: 1023px) {
+            .faq-mobile-container {
+              overflow-x: hidden !important;
+              max-width: 100vw !important;
+              width: 100% !important;
+            }
+            .faq-mobile-container * {
+              max-width: 100% !important;
+              box-sizing: border-box !important;
+            }
+          }
+          
+          /* Remove default list markers from summary elements - Mobile only */
+          @media (max-width: 1023px) {
+            .faq-mobile-container summary {
+              list-style: none !important;
+              display: flex !important;
+              align-items: flex-start !important;
+              justify-content: space-between !important;
+              width: 100% !important;
+              padding: 1rem 0 !important;
+            }
+            
+            .faq-mobile-container summary::-webkit-details-marker {
+              display: none !important;
+            }
+            
+            .faq-mobile-container summary::marker {
+              display: none !important;
+            }
+            
+            /* Force mobile layout structure for FAQ */
+            .faq-mobile-container summary > span:first-child {
+              flex: 1 !important;
+              padding-right: 0.75rem !important;
+            }
+            
+            .faq-mobile-container summary > span:last-child {
+              flex-shrink: 0 !important;
+              margin-left: auto !important;
+              align-self: flex-start !important;
+            }
+          }
+        `
+      }} />
+      {/* Desktop Layout */}
+      <div class="hidden lg:flex lg:flex-row gap-10 lg:gap-20 justify-between">
         <div class="flex-none space-y-6 lg:w-2/5">
           <p class="text-4xl leading-snug">
             {title}
           </p>
-          <p class="text-lg">
-            {description}
-          </p>
-          <a
-            key={cta?.id}
-            id={cta?.id}
-            href={cta?.href}
-            target={cta?.href.includes("http") ? "_blank" : "_self"}
-            class={`font-normal btn btn-primary ${
-              cta.outline && "btn-outline"
-            }`}
-          >
-            {cta?.text}
-          </a>
+          {description && (
+            <p class="text-lg">
+              {description}
+            </p>
+          )}
+          {cta && (
+            <a
+              key={cta?.id}
+              id={cta?.id}
+              href={cta?.href}
+              target={cta?.href.includes("http") ? "_blank" : "_self"}
+              class={`font-normal btn btn-primary ${
+                cta.outline && "btn-outline"
+              }`}
+            >
+              {cta?.text}
+            </a>
+          )}
         </div>
-        <div class="flex-auto border-primary border-t">
+        <div class="flex-auto faq-border-gradient-top">
           {questions?.map((question) => (
-            <details class="border-primary border-b group">
+            <details class="faq-border-gradient-bottom group">
               <summary class="text-lg cursor-pointer py-6 flex ">
                 <span class="flex-auto">{question.title}</span>
                 <span class="flex-none transition group-open:rotate-180">
-                  <svg
-                    width="32"
-                    height="33"
-                    viewBox="0 0 32 33"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M8.17674 12.5577L8.17676 12.5577L8.5303 12.2041C8.53031 12.2041 8.53031 12.2041 8.53032 12.2041C8.62794 12.1065 8.78621 12.1065 8.88385 12.2041C8.88385 12.2041 8.88385 12.2041 8.88385 12.2041L15.6464 18.9667L16 19.3202L16.3535 18.9667L23.1161 12.2041C23.2138 12.1064 23.372 12.1064 23.4696 12.2041L23.8232 12.5577C23.9208 12.6553 23.9208 12.8135 23.8232 12.9112L16.1767 20.5577C16.0791 20.6553 15.9209 20.6553 15.8232 20.5577L8.17674 12.9112C8.17674 12.9112 8.17674 12.9112 8.17674 12.9112C8.07911 12.8135 8.07911 12.6553 8.17674 12.5577Z"
-                      fill="#18181B"
-                      stroke="#18181B"
-                    />
-                  </svg>
+                  <Icon
+                    id="ChevronDown"
+                    width={32}
+                    height={33}
+                    class="stroke-2"
+                  />
                 </span>
               </summary>
               <p
@@ -99,6 +151,55 @@ export default function BlogPosts({
                 dangerouslySetInnerHTML={{ __html: question.answer }}
               >
               </p>
+            </details>
+          ))}
+        </div>
+      </div>
+
+      {/* Mobile Layout */}
+      <div class="block lg:hidden w-full overflow-x-hidden faq-mobile-container">
+        <div class="space-y-6 mb-8 w-full">
+          <p class="text-3xl leading-snug w-full">
+            {title}
+          </p>
+          {description && (
+            <p class="text-base leading-relaxed w-full">
+              {description}
+            </p>
+          )}
+          {cta && (
+            <a
+              key={cta?.id}
+              id={cta?.id}
+              href={cta?.href}
+              target={cta?.href.includes("http") ? "_blank" : "_self"}
+              class={`font-normal btn btn-primary w-full text-center ${
+                cta.outline && "btn-outline"
+              }`}
+            >
+              {cta?.text}
+            </a>
+          )}
+        </div>
+        <div class="faq-border-gradient-top w-full">
+          {questions?.map((question) => (
+            <details class="faq-border-gradient-bottom group w-full">
+              <summary class="text-base cursor-pointer py-4 flex items-start w-full">
+                <span class="flex-auto pr-3 leading-relaxed w-full">{question.title}</span>
+                <span class="flex-none transition group-open:rotate-180 mt-1">
+                  <Icon
+                    id="ChevronDown"
+                    width={24}
+                    height={24}
+                    class="stroke-2"
+                  />
+                </span>
+              </summary>
+              <div
+                class="leading-relaxed mb-4 group-open:animate-fadeIn px-1 w-full"
+                dangerouslySetInnerHTML={{ __html: question.answer }}
+              >
+              </div>
             </details>
           ))}
         </div>

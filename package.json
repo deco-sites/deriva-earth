@@ -1,0 +1,14 @@
+{
+  "name": "derivative-convex",
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "convex:dev": "convex dev",
+    "convex:deploy": "convex deploy",
+    "convex:deploy:prod": "convex deploy --yes",
+    "convex:deploy:dev": "convex dev --once"
+  },
+  "dependencies": {
+    "convex": "^1.26.2"
+  }
+}
