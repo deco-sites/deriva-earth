@@ -22,10 +22,10 @@ export default function ContactFormHybrid({
         <div class="hidden lg:grid lg:grid-cols-2 gap-8 lg:gap-12 items-center min-h-screen py-8">
           {/* Textos à esquerda */}
           <div class="text-left scroll-animate" style="opacity: 0; transform: translateY(30px); transition: opacity 0.8s ease-out, transform 0.8s ease-out;">
-            <h2 class="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
+            <h2 class="text-4xl sm:text-5xl lg:text-6xl font-normal text-white mb-6 leading-tight font-sans">
               {title}
             </h2>
-            <p class="text-lg sm:text-xl lg:text-2xl text-white leading-relaxed">
+            <p class="text-lg sm:text-xl lg:text-2xl text-white leading-relaxed font-sans">
               {description}
             </p>
           </div>
@@ -38,7 +38,7 @@ export default function ContactFormHybrid({
             {/* Formulário sem form tag - usando divs */}
             <div id="contactForm" class="space-y-6">
               <div>
-                <label for="nome" class="block text-sm font-medium text-gray-700 mb-2">
+                <label for="nome" class="block text-sm font-medium text-gray-700 mb-2 font-sans">
                   Nome Completo
                 </label>
                 <input
@@ -46,14 +46,14 @@ export default function ContactFormHybrid({
                   id="nome"
                   name="nome"
                   required
-                  class="w-full px-4 py-3 border-0 rounded-xl focus:bg-transparent focus:border focus:border-gray-400 focus:outline-none"
+                  class="w-full px-4 py-3 border-0 rounded-xl focus:bg-transparent focus:border focus:border-gray-400 focus:outline-none font-sans"
                   style="background-color: #F5F5F5; color: #1F2937;"
                   placeholder="Seu nome completo"
                 />
               </div>
 
               <div>
-                <label for="email" class="block text-sm font-medium text-gray-700 mb-2">
+                <label for="email" class="block text-sm font-medium text-gray-700 mb-2 font-sans">
                   Email
                 </label>
                 <input
@@ -61,14 +61,14 @@ export default function ContactFormHybrid({
                   id="email"
                   name="email"
                   required
-                  class="w-full px-4 py-3 border-0 rounded-xl focus:bg-transparent focus:border focus:border-gray-400 focus:outline-none"
+                  class="w-full px-4 py-3 border-0 rounded-xl focus:bg-transparent focus:border focus:border-gray-400 focus:outline-none font-sans"
                   style="background-color: #F5F5F5; color: #1F2937;"
                   placeholder="seu@email.com"
                 />
               </div>
 
               <div>
-                <label for="mensagem" class="block text-sm font-medium text-gray-700 mb-2">
+                <label for="mensagem" class="block text-sm font-medium text-gray-700 mb-2 font-sans">
                   Mensagem
                 </label>
                 <textarea
@@ -76,7 +76,7 @@ export default function ContactFormHybrid({
                   name="mensagem"
                   rows={5}
                   required
-                  class="w-full px-4 py-3 border-0 rounded-xl focus:bg-transparent focus:border focus:border-gray-400 focus:outline-none resize-none"
+                  class="w-full px-4 py-3 border-0 rounded-xl focus:bg-transparent focus:border focus:border-gray-400 focus:outline-none resize-none font-sans"
                   style="background-color: #F5F5F5; color: #1F2937;"
                   placeholder="Conte-nos sobre seu projeto ou dúvida..."
                 ></textarea>
@@ -85,7 +85,7 @@ export default function ContactFormHybrid({
               <button
                 type="button"
                 id="submitBtn"
-                class="w-full bg-black hover:bg-gray-800 text-white font-medium py-3 px-6 rounded-xl transition-all duration-200"
+                class="w-full bg-black hover:bg-gray-800 text-white font-medium py-3 px-6 rounded-xl transition-all duration-200 font-mono"
               >
                 Enviar Mensagem
               </button>
@@ -98,10 +98,10 @@ export default function ContactFormHybrid({
         <div class="block lg:hidden py-8">
           {/* Textos no topo */}
           <div class="text-center mb-8 scroll-animate" style="opacity: 0; transform: translateY(30px); transition: opacity 0.8s ease-out, transform 0.8s ease-out;">
-            <h2 class="text-3xl sm:text-4xl font-bold text-white mb-4 leading-tight">
+            <h2 class="text-3xl sm:text-4xl font-normal text-white mb-4 leading-tight font-sans">
               {title}
             </h2>
-            <p class="text-base sm:text-lg text-white leading-relaxed px-4">
+            <p class="text-base sm:text-lg text-white leading-relaxed px-4 font-sans">
               {description}
             </p>
           </div>
@@ -114,7 +114,7 @@ export default function ContactFormHybrid({
             {/* Formulário sem form tag - usando divs */}
             <div id="contactForm-mobile" class="space-y-4">
               <div>
-                <label for="nome-mobile" class="block text-sm font-medium text-gray-700 mb-2">
+                <label for="nome-mobile" class="block text-sm font-medium text-gray-700 mb-2 font-sans">
                   Nome Completo
                 </label>
                 <input
@@ -122,14 +122,14 @@ export default function ContactFormHybrid({
                   id="nome-mobile"
                   name="nome"
                   required
-                  class="w-full px-4 py-3 border-0 rounded-xl focus:bg-transparent focus:border focus:border-gray-400 focus:outline-none"
+                  class="w-full px-4 py-3 border-0 rounded-xl focus:bg-transparent focus:border focus:border-gray-400 focus:outline-none font-sans"
                   style="background-color: #F5F5F5; color: #1F2937;"
                   placeholder="Seu nome completo"
                 />
               </div>
 
               <div>
-                <label for="email-mobile" class="block text-sm font-medium text-gray-700 mb-2">
+                <label for="email-mobile" class="block text-sm font-medium text-gray-700 mb-2 font-sans">
                   Email
                 </label>
                 <input
@@ -137,14 +137,14 @@ export default function ContactFormHybrid({
                   id="email-mobile"
                   name="email"
                   required
-                  class="w-full px-4 py-3 border-0 rounded-xl focus:bg-transparent focus:border focus:border-gray-400 focus:outline-none"
+                  class="w-full px-4 py-3 border-0 rounded-xl focus:bg-transparent focus:border focus:border-gray-400 focus:outline-none font-sans"
                   style="background-color: #F5F5F5; color: #1F2937;"
                   placeholder="seu@email.com"
                 />
               </div>
 
               <div>
-                <label for="mensagem-mobile" class="block text-sm font-medium text-gray-700 mb-2">
+                <label for="mensagem-mobile" class="block text-sm font-medium text-gray-700 mb-2 font-sans">
                   Mensagem
                 </label>
                 <textarea
@@ -152,7 +152,7 @@ export default function ContactFormHybrid({
                   name="mensagem"
                   rows={4}
                   required
-                  class="w-full px-4 py-3 border-0 rounded-xl focus:bg-transparent focus:border focus:border-gray-400 focus:outline-none resize-none"
+                  class="w-full px-4 py-3 border-0 rounded-xl focus:bg-transparent focus:border focus:border-gray-400 focus:outline-none resize-none font-sans"
                   style="background-color: #F5F5F5; color: #1F2937;"
                   placeholder="Conte-nos sobre seu projeto ou dúvida..."
                 ></textarea>
@@ -161,7 +161,7 @@ export default function ContactFormHybrid({
               <button
                 type="button"
                 id="submitBtn-mobile"
-                class="w-full bg-black hover:bg-gray-800 text-white font-medium py-3 px-6 rounded-xl transition-all duration-200"
+                class="w-full bg-black hover:bg-gray-800 text-white font-medium py-3 px-6 rounded-xl transition-all duration-200 font-mono"
               >
                 Enviar Mensagem
               </button>

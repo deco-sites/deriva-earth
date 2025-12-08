@@ -48,7 +48,8 @@ export default function BlogPosts({
   ],
 }: Props) {
   return (
-    <div class="container lg:mx-auto px-4 lg:px-0 text-sm py-12 lg:py-28 max-w-7xl" style="overflow-x: hidden !important;">
+    <div style="background-color: #1D1B1D; padding: 96px 0;">
+    <div class="container lg:mx-auto px-4 lg:px-0 text-sm max-w-7xl" style="overflow-x: hidden !important;">
       <style dangerouslySetInnerHTML={{
         __html: `
           .faq-border-gradient {
@@ -110,11 +111,11 @@ export default function BlogPosts({
       {/* Desktop Layout */}
       <div class="hidden lg:flex lg:flex-row gap-10 lg:gap-20 justify-between">
         <div class="flex-none space-y-6 lg:w-2/5">
-          <p class="text-4xl leading-snug">
+          <p class="text-4xl leading-snug font-sans font-normal text-white">
             {title}
           </p>
           {description && (
-            <p class="text-lg">
+            <p class="text-lg font-sans" style="color: #A1ACAA;">
               {description}
             </p>
           )}
@@ -135,7 +136,7 @@ export default function BlogPosts({
         <div class="flex-auto faq-border-gradient-top">
           {questions?.map((question) => (
             <details class="faq-border-gradient-bottom group">
-              <summary class="text-lg cursor-pointer py-6 flex ">
+              <summary class="text-lg cursor-pointer py-6 flex font-sans text-white">
                 <span class="flex-auto">{question.title}</span>
                 <span class="flex-none transition group-open:rotate-180">
                   <Icon
@@ -147,7 +148,8 @@ export default function BlogPosts({
                 </span>
               </summary>
               <p
-                class="leading-relaxed mb-6 group-open:animate-fadeIn"
+                class="leading-relaxed mb-6 group-open:animate-fadeIn font-sans"
+                style="color: #A1ACAA;"
                 dangerouslySetInnerHTML={{ __html: question.answer }}
               >
               </p>
@@ -159,11 +161,11 @@ export default function BlogPosts({
       {/* Mobile Layout */}
       <div class="block lg:hidden w-full overflow-x-hidden faq-mobile-container">
         <div class="space-y-6 mb-8 w-full">
-          <p class="text-3xl leading-snug w-full">
+          <p class="text-3xl leading-snug w-full font-sans font-normal text-white">
             {title}
           </p>
           {description && (
-            <p class="text-base leading-relaxed w-full">
+            <p class="text-base leading-relaxed w-full font-sans" style="color: #A1ACAA;">
               {description}
             </p>
           )}
@@ -184,7 +186,7 @@ export default function BlogPosts({
         <div class="faq-border-gradient-top w-full">
           {questions?.map((question) => (
             <details class="faq-border-gradient-bottom group w-full">
-              <summary class="text-base cursor-pointer py-4 flex items-start w-full">
+              <summary class="text-base cursor-pointer py-4 flex items-start w-full font-sans text-white">
                 <span class="flex-auto pr-3 leading-relaxed w-full">{question.title}</span>
                 <span class="flex-none transition group-open:rotate-180 mt-1">
                   <Icon
@@ -196,7 +198,8 @@ export default function BlogPosts({
                 </span>
               </summary>
               <div
-                class="leading-relaxed mb-4 group-open:animate-fadeIn px-1 w-full"
+                class="leading-relaxed mb-4 group-open:animate-fadeIn px-1 w-full font-sans"
+                style="color: #A1ACAA;"
                 dangerouslySetInnerHTML={{ __html: question.answer }}
               >
               </div>
@@ -204,6 +207,7 @@ export default function BlogPosts({
           ))}
         </div>
       </div>
+    </div>
     </div>
   );
 }

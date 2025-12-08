@@ -41,19 +41,15 @@ export default function Derivative({
         {/* Desktop Layout */}
         <div class="hidden lg:grid lg:grid-cols-2 gap-12 lg:gap-16 items-start">
           {/* Left Column - Content */}
-          <div class="opacity-0 translate-y-8 transition-all duration-1000 ease-out scroll-animate">
-            {/* UnicornStudio Interactive Component with DERIVATIVE title */}
-            <div class="mb-0">
-              <div 
-                class="relative w-full overflow-hidden"
-                style="aspect-ratio: 1440/900; max-height: 150px; transform: translateX(-40px) !important;"
+          <div>
+            {/* DERIVATIVE Title */}
+            <div class="mb-4">
+              <h2 
+                class="font-mono font-medium tracking-tight"
+                style="font-size: 4rem; color: #1d1b1d; letter-spacing: -0.02em;"
               >
-                <div 
-                  data-us-project="CfUBNRWqqovof8qgj5r4" 
-                  class="absolute inset-0 w-full h-full"
-                  style="width: 100%; height: 100%;"
-                ></div>
-              </div>
+                DERIVATIVE<span style="font-size: 2.5rem; vertical-align: super;">®</span>
+              </h2>
             </div>
 
             {/* Subtitle */}
@@ -73,7 +69,7 @@ export default function Derivative({
                         style="width: 32px !important; height: 32px !important;"
                       />
                     </div>
-                    <span style="color: #4A4A4A !important; font-family: sans-serif !important; font-size: 18px !important; font-weight: 500 !important; line-height: 1.5 !important;">
+                    <span style="color: #4A4A4A !important; font-family: 'Inter', sans-serif !important; font-size: 18px !important; font-weight: 500 !important; line-height: 1.5 !important;">
                       {benefit.text}
                     </span>
                   </div>
@@ -93,18 +89,14 @@ export default function Derivative({
 
         {/* Mobile Layout */}
         <div class="block lg:hidden">
-          {/* Mobile - UnicornStudio DERIVATIVE title at top */}
-          <div class="opacity-0 translate-y-8 transition-all duration-1000 ease-out scroll-animate mb-8">
-            <div 
-              class="relative w-full overflow-hidden mx-auto"
-              style="aspect-ratio: 1440/900; max-height: 120px; width: 100%; max-width: 100%;"
+          {/* Mobile - DERIVATIVE title at top */}
+          <div class="mb-6 text-center">
+            <h2 
+              class="font-mono font-medium tracking-tight"
+              style="font-size: 2.5rem; color: #1d1b1d; letter-spacing: -0.02em;"
             >
-              <div 
-                data-us-project="CfUBNRWqqovof8qgj5r4" 
-                class="absolute inset-0 w-full h-full"
-                style="width: 100%; height: 100%;"
-              ></div>
-            </div>
+              DERIVATIVE<span style="font-size: 1.5rem; vertical-align: super;">®</span>
+            </h2>
           </div>
 
           {/* Mobile - Description */}
@@ -126,7 +118,7 @@ export default function Derivative({
                       style="width: 28px !important; height: 28px !important;"
                     />
                   </div>
-                  <span style="color: #4A4A4A !important; font-family: sans-serif !important; font-size: 16px !important; font-weight: 500 !important; line-height: 1.4 !important;">
+                  <span style="color: #4A4A4A !important; font-family: 'Inter', sans-serif !important; font-size: 16px !important; font-weight: 500 !important; line-height: 1.4 !important;">
                     {benefit.text}
                   </span>
                 </div>
@@ -219,7 +211,7 @@ export default function Derivative({
                 playsinline
                 preload="metadata"
               >
-                <source src="https://assets.decocache.com/derivative/4a529e95-9bc4-42d6-b339-6b683cbd9104/video_oculos.mp4?v=4" type="video/mp4" />
+                <source src="https://assets.decocache.com/deriva-earth/38f16cea-93f3-46c6-bafd-84f346a83b8d/video_oculos-(1).mp4" type="video/mp4" />
                 Seu navegador não suporta vídeos.
               </video>
               
@@ -233,7 +225,7 @@ export default function Derivative({
                 playsinline
                 preload="metadata"
               >
-                <source src="https://assets.decocache.com/derivative/90d80454-042c-4569-9805-c621485972ed/social_u4548274989_3d_modern_sportive_wristwatch_product_wireframe_f_4f8b60f9-d119-488d-841e-0ef23cb596d4_3.mp4" type="video/mp4" />
+                <source src="https://assets.decocache.com/deriva-earth/98dc3f18-1007-4ea2-8c3b-755d4d77590a/social_u4548274989_3d_modern_sportive_wristwatch_product_wireframe_f_4f8b60f9-d119-488d-841e-0ef23cb596d4_3-(1).mp4" type="video/mp4" />
                 Seu navegador não suporta vídeos.
               </video>
               
@@ -338,7 +330,7 @@ export default function Derivative({
                   controlslist="nodownload nofullscreen noremoteplayback"
                   disableRemotePlayback
                 >
-                  <source src="https://assets.decocache.com/derivative/4a529e95-9bc4-42d6-b339-6b683cbd9104/video_oculos.mp4?v=4" type="video/mp4" />
+                  <source src="https://assets.decocache.com/deriva-earth/38f16cea-93f3-46c6-bafd-84f346a83b8d/video_oculos-(1).mp4" type="video/mp4" />
                   Seu navegador não suporta vídeos.
                 </video>
                 
@@ -357,7 +349,7 @@ export default function Derivative({
                   controlslist="nodownload nofullscreen noremoteplayback"
                   disableRemotePlayback
                 >
-                  <source src="https://assets.decocache.com/derivative/90d80454-042c-4569-9805-c621485972ed/social_u4548274989_3d_modern_sportive_wristwatch_product_wireframe_f_4f8b60f9-d119-488d-841e-0ef23cb596d4_3.mp4" type="video/mp4" />
+                  <source src="https://assets.decocache.com/deriva-earth/98dc3f18-1007-4ea2-8c3b-755d4d77590a/social_u4548274989_3d_modern_sportive_wristwatch_product_wireframe_f_4f8b60f9-d119-488d-841e-0ef23cb596d4_3-(1).mp4" type="video/mp4" />
                   Seu navegador não suporta vídeos.
                 </video>
                 
@@ -1645,6 +1637,49 @@ export default function Derivative({
         }}
       />
 
+      {/* UnicornStudio Script */}
+      <script 
+        type="text/javascript"
+        dangerouslySetInnerHTML={{
+          __html: `
+            (function() {
+              function initUnicorn() {
+                if (typeof UnicornStudio !== 'undefined' && UnicornStudio.init) {
+                  UnicornStudio.init();
+                }
+              }
+              
+              if (!window.UnicornStudioLoaded) {
+                window.UnicornStudioLoaded = true;
+                var script = document.createElement('script');
+                script.src = 'https://cdn.jsdelivr.net/gh/hiunicornstudio/unicornstudio.js@v1.4.29/dist/unicornStudio.umd.js';
+                script.onload = function() {
+                  initUnicorn();
+                };
+                (document.head || document.body).appendChild(script);
+              } else {
+                // Script already loaded, just reinitialize
+                setTimeout(initUnicorn, 100);
+              }
+            })();
+          `
+        }}
+      />
+      </section>
+    </div>
+  );
+}
+
+// Loading fallback for Lazy rendering
+export function LoadingFallback() {
+  return (
+    <div id="derivative" style="background-color: #1d1b1d; min-height: 100vh;">
+      <section class="relative py-20 lg:py-32 mx-4 lg:mx-8" style="background-color: #fcfafc; border-radius: 24px; overflow: hidden;">
+        <div class="container mx-auto px-4 lg:px-8">
+          <div class="flex items-center justify-center min-h-[400px]">
+            <div class="animate-pulse text-gray-400">Carregando...</div>
+          </div>
+        </div>
       </section>
     </div>
   );

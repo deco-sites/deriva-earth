@@ -15,6 +15,45 @@ export default defineApp(async (_req, ctx) => {
             __html: `@view-transition { navigation: auto; }`,
         }}/>
 
+        {/* Google Fonts - Inter */}
+        <link rel="preconnect" href="https://fonts.googleapis.com"/>
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous"/>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+        
+        {/* Geist Mono from Vercel GitHub */}
+        <style dangerouslySetInnerHTML={{
+          __html: `
+            @font-face {
+              font-family: 'Geist Mono';
+              src: url('https://cdn.jsdelivr.net/npm/geist@1.2.2/dist/fonts/geist-mono/GeistMono-Regular.woff2') format('woff2');
+              font-weight: 400;
+              font-style: normal;
+              font-display: swap;
+            }
+            @font-face {
+              font-family: 'Geist Mono';
+              src: url('https://cdn.jsdelivr.net/npm/geist@1.2.2/dist/fonts/geist-mono/GeistMono-Medium.woff2') format('woff2');
+              font-weight: 500;
+              font-style: normal;
+              font-display: swap;
+            }
+            @font-face {
+              font-family: 'Geist Mono';
+              src: url('https://cdn.jsdelivr.net/npm/geist@1.2.2/dist/fonts/geist-mono/GeistMono-SemiBold.woff2') format('woff2');
+              font-weight: 600;
+              font-style: normal;
+              font-display: swap;
+            }
+            @font-face {
+              font-family: 'Geist Mono';
+              src: url('https://cdn.jsdelivr.net/npm/geist@1.2.2/dist/fonts/geist-mono/GeistMono-Bold.woff2') format('woff2');
+              font-weight: 700;
+              font-style: normal;
+              font-display: swap;
+            }
+          `
+        }}/>
+
         {/* Tailwind v3 CSS file - try both paths */}
         <link href={asset(`/styles.css?revision=${revision}`)} rel="stylesheet"/>
         <link href={asset(`/tailwind.css?revision=${revision}`)} rel="stylesheet"/>

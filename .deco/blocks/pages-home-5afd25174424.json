@@ -3,49 +3,36 @@
   "path": "/",
   "sections": [
     {
-      "__resolveType": "Header"
-    },
-    {
-      "__resolveType": "website/sections/Rendering/Lazy.tsx",
-      "section": {
-        "__resolveType": "site/sections/Derivative.tsx"
+      "__resolveType": "Header",
+      "navigation": {
+        "links": [
+          { "label": "DERIVATIVE", "url": "#derivative" },
+          { "label": "SISTEMA REGENERATIVO", "url": "#sistema" },
+          { "label": "SOLUÇÕES", "url": "#services" },
+          { "label": "MISSÃO", "url": "#mission" }
+        ]
       }
     },
     {
-      "__resolveType": "website/sections/Rendering/Lazy.tsx",
-      "section": {
-        "__resolveType": "site/sections/NetworkRecoverySteps.tsx"
-      }
+      "__resolveType": "site/sections/Derivative.tsx"
     },
     {
-      "__resolveType": "website/sections/Rendering/Lazy.tsx",
-      "section": {
-        "__resolveType": "site/sections/Services.tsx"
-      }
+      "__resolveType": "site/sections/NetworkRecoverySteps.tsx"
     },
     {
-      "__resolveType": "website/sections/Rendering/Lazy.tsx",
-      "section": {
-        "__resolveType": "site/sections/Benefits.tsx"
-      }
+      "__resolveType": "site/sections/Services.tsx"
     },
     {
-      "__resolveType": "website/sections/Rendering/Lazy.tsx",
-      "section": {
-        "__resolveType": "site/sections/Mission.tsx"
-      }
+      "__resolveType": "site/sections/Benefits.tsx"
     },
     {
-      "__resolveType": "website/sections/Rendering/Lazy.tsx",
-      "section": {
-        "__resolveType": "site/sections/Faq.tsx"
-      }
+      "__resolveType": "site/sections/Mission.tsx"
     },
     {
-      "__resolveType": "website/sections/Rendering/Lazy.tsx",
-      "section": {
-        "__resolveType": "site/sections/ContactFormHybrid.tsx"
-      }
+      "__resolveType": "site/sections/Faq.tsx"
+    },
+    {
+      "__resolveType": "site/sections/ContactFormHybrid.tsx"
     }
   ],
   "__resolveType": "website/pages/Page.tsx",

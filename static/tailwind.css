@@ -1403,6 +1403,17 @@ html {
 :root:has(:is(.modal-open, .\!modal:target, .modal-toggle:checked + .\!modal, .\!modal[open])) {
   overflow: hidden !important;
 }
+.navbar {
+  display: flex;
+  align-items: center;
+  padding: var(--navbar-padding, 0.5rem);
+  min-height: 4rem;
+  width: 100%;
+}
+:where(.navbar > *) {
+  display: inline-flex;
+  align-items: center;
+}
 .progress {
   position: relative;
   width: 100%;
@@ -3233,9 +3244,6 @@ input.tab:checked + .tab-content,
   margin-top: 0.25rem;
   margin-bottom: 0.25rem;
 }
-.mb-0 {
-  margin-bottom: 0px;
-}
 .mb-12 {
   margin-bottom: 3rem;
 }
@@ -3415,6 +3423,9 @@ input.tab:checked + .tab-content,
 }
 .min-h-\[157px\] {
   min-height: 157px;
+}
+.min-h-\[400px\] {
+  min-height: 400px;
 }
 .min-h-\[40px\] {
   min-height: 40px;
@@ -3650,6 +3661,15 @@ input.tab:checked + .tab-content,
 }
 .transform {
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+@keyframes pulse {
+
+  50% {
+    opacity: .5;
+  }
+}
+.animate-pulse {
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
 }
 @keyframes sliding {
 

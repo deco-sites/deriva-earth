@@ -102,7 +102,7 @@ export default function Header({
                   <a
                     href={link.url}
                     aria-label={link.label}
-                    class="text-snow-white font-mono text-sm uppercase tracking-wider relative group"
+                    class="text-snow-white font-mono font-normal text-sm uppercase tracking-wider relative group"
                   >
                     {link.label}
                     <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-snow-white/70 to-snow-white/20 transition-all duration-300 group-hover:w-full"></span>
@@ -148,7 +148,7 @@ export default function Header({
                       <a 
                         href={link.url} 
                         aria-label={link.label}
-                        class="text-snow-white font-mono text-sm uppercase tracking-wider relative group"
+                        class="text-snow-white font-mono font-normal text-sm uppercase tracking-wider relative group"
                       >
                         {link.label}
                         <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-snow-white/70 to-snow-white/20 transition-all duration-300 group-hover:w-full"></span>
@@ -494,6 +494,58 @@ export default function Header({
             
             console.log('✅ Modal configurado! Formulário inicializado.');
           }
+        `
+      }} />
+      
+      {/* Smooth Scroll Script */}
+      <script dangerouslySetInnerHTML={{
+        __html: `
+          (function() {
+            // Função para fazer scroll suave
+            function smoothScrollTo(targetId) {
+              const targetElement = document.querySelector(targetId);
+              if (targetElement) {
+                const offset = 80; // Altura da navbar
+                const elementPosition = targetElement.getBoundingClientRect().top;
+                const offsetPosition = elementPosition + window.pageYOffset - offset;
+                
+                window.scrollTo({
+                  top: offsetPosition,
+                  behavior: 'smooth'
+                });
+              }
+            }
+            
+            // Interceptar cliques em links de navegação
+            function initSmoothScroll() {
+              const navLinks = document.querySelectorAll('nav a[href^="#"]');
+              
+              navLinks.forEach(link => {
+                link.addEventListener('click', function(e) {
+                  const href = this.getAttribute('href');
+                  
+                  // Ignorar links vazios ou apenas #
+                  if (href && href !== '#' && href.length > 1) {
+                    e.preventDefault();
+                    smoothScrollTo(href);
+                    
+                    // Fechar menu mobile se estiver aberto
+                    const mobileMenuCheckbox = document.getElementById('menu-mobile');
+                    if (mobileMenuCheckbox && mobileMenuCheckbox.checked) {
+                      mobileMenuCheckbox.checked = false;
+                    }
+                  }
+                });
+              });
+            }
+            
+            // Inicializar quando DOM estiver pronto
+            if (document.readyState === 'loading') {
+              document.addEventListener('DOMContentLoaded', initSmoothScroll);
+            } else {
+              initSmoothScroll();
+            }
+          })();
         `
       }} />
     </header>
