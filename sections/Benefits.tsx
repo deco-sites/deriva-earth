@@ -44,7 +44,7 @@ export default function Benefits({
     {
       title: "Rastreie toda a cadeia",
       description: "Tenha total visibilidade da origem e cada etapa do processo, fortalecendo a confiança do consumidor, consolidando a reputação da marca e mostrando compromisso real com transparência e sustentabilidade.",
-      image: "https://assets.decocache.com/derivative/e4099f66-5377-4140-a714-873fcc659a3c/rastreabilidade.svg"
+      image: "https://assets.decocache.com/deriva-earth/d60645e6-5b25-4c62-9768-bbaa2b62607d/rastreabilidade.svg"
     }
   ],
 }: Props) {

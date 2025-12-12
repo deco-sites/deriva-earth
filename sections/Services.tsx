@@ -39,14 +39,14 @@ export default function Services({
       tags: ["Material Exclusivo", "Impacto Regenerativo", "Narrativa de Propósito"]
     },
     {
-      title: "Deriva Way",
+      title: "Estúdio",
       subtitle: "Co-criação de soluções inteligentes",
       description: "Nossa frente criativa combina design, engenharia, biologia e tecnologia para co-criar soluções de produto inteligentes e desejadas usando Derivative®. Vamos além do produto, estruturamos o seu ciclo de vida para que sua existência seja coerente e a experiência com o cliente seja memorável.",
       icon: "https://assets.decocache.com/derivative/ef364b7e-91ce-4e8b-a4d3-0e2c53d1e06b/services_2.jpg",
       tags: ["Design Multidisciplinar", "Ciclo de Vida Completo", "Objetos de Desejo"]
     },
     {
-      title: "Own your Derivative®",
+      title: "Simbiose",
       subtitle: "Circularidade completa",
       description: "Desenvolvemos Derivative® exclusivo a partir dos resíduos têxteis pré-consumo da sua própria produção. Assim, o que antes seria descartado retorna para o ecossistema de produtos, fortalecendo sua marca e promovendo uma economia circular.",
       icon: "https://assets.decocache.com/derivative/f544e9c6-40e2-4bdc-85f8-9adf0c9e6daf/services_3.jpg",
@@ -510,6 +510,52 @@ export default function Services({
           } else {
             // Desktop: delay de 1 segundo
             setTimeout(initLottiePlayers, 1000);
+          }
+          
+          // Hover effect para abrir cards automaticamente
+          function initHoverEffect() {
+            const serviceCards = document.querySelectorAll('.service-card');
+            
+            serviceCards.forEach((card) => {
+              const detailsElement = card.closest('details');
+              
+              if (detailsElement) {
+                let hoverTimeout;
+                
+                card.addEventListener('mouseenter', () => {
+                  // Limpar timeout anterior se existir
+                  if (hoverTimeout) {
+                    clearTimeout(hoverTimeout);
+                  }
+                  
+                  // Abrir após um pequeno delay para melhor UX
+                  hoverTimeout = setTimeout(() => {
+                    if (!detailsElement.open) {
+                      detailsElement.open = true;
+                    }
+                  }, 300);
+                });
+                
+                card.addEventListener('mouseleave', () => {
+                  // Limpar timeout se o mouse sair antes de abrir
+                  if (hoverTimeout) {
+                    clearTimeout(hoverTimeout);
+                  }
+                  
+                  // Fechar após um delay quando o mouse sair
+                  hoverTimeout = setTimeout(() => {
+                    if (detailsElement.open) {
+                      detailsElement.open = false;
+                    }
+                  }, 500);
+                });
+              }
+            });
+          }
+          
+          // Inicializar hover effect apenas em desktop
+          if (!isMobile) {
+            initHoverEffect();
           }
         });
       `}</script>

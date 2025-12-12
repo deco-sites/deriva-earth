@@ -48,7 +48,7 @@ export default function Header({
       { label: "MISSÃO", url: "#mission" },
     ],
   },
-  backgroundVideo = "https://assets.decocache.com/derivative/d81f13fc-4f89-4c4c-a562-b434436f99bd/background2_header-(1).mp4",
+  backgroundVideo = "https://assets.decocache.com/deriva-earth/63f76078-d3d8-46e9-8f55-bafe3c32fa6b/background2_header-(1)-(1).mp4",
   title = "REGENERANDO O OCEANO, TRANSFORMANDO MARCAS",
   ctaButton = {
     id: "cta-movement",

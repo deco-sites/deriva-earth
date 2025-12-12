@@ -16,12 +16,12 @@ export default function Derivative({
       text: "Novo destino para ameaças ambientais"
     },
     {
-      icon: "https://assets.decocache.com/derivative/59a05c46-dd77-42a0-b6d5-d8cdf3244268/Frame-(1).svg",
+      icon: "https://assets.decocache.com/deriva-earth/8ff1b507-75a3-4fb8-9f32-cd11b53232f3/materialunico.svg",
       text: "Material único no Brasil"
     },
     {
-      icon: "https://assets.decocache.com/derivative/59a05c46-dd77-42a0-b6d5-d8cdf3244268/Frame-(1).svg",
-      text: "Transparência e rastreabilidade"
+      icon: "https://assets.decocache.com/deriva-earth/c18b8c43-a056-436b-8561-b1ff3a0609d8/cadeiarastreavel.svg",
+      text: "Cadeia rastreável"
     }
   ]
 }: Props) {
