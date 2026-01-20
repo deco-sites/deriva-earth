@@ -22,10 +22,10 @@ export default function ContactFormHybrid({
         <div class="hidden lg:grid lg:grid-cols-2 gap-8 lg:gap-12 items-center min-h-screen py-8">
           {/* Textos à esquerda */}
           <div class="text-left scroll-animate" style="opacity: 0; transform: translateY(30px); transition: opacity 0.8s ease-out, transform 0.8s ease-out;">
-            <h2 class="text-4xl sm:text-5xl lg:text-6xl font-normal text-white mb-6 leading-tight font-sans">
+            <h2 class="text-4xl sm:text-5xl lg:text-6xl font-normal text-white mb-6 leading-tight font-sans" data-i18n="contactFormTitle">
               {title}
             </h2>
-            <p class="text-lg sm:text-xl lg:text-2xl text-white leading-relaxed font-sans">
+            <p class="text-lg sm:text-xl lg:text-2xl text-white leading-relaxed font-sans" data-i18n="contactFormDescription">
               {description}
             </p>
           </div>
@@ -38,7 +38,7 @@ export default function ContactFormHybrid({
             {/* Formulário sem form tag - usando divs */}
             <div id="contactForm" class="space-y-6">
               <div>
-                <label for="nome" class="block text-sm font-medium text-gray-700 mb-2 font-sans">
+                <label for="nome" class="block text-sm font-medium text-gray-700 mb-2 font-sans" data-i18n="contactFormNome">
                   Nome Completo
                 </label>
                 <input
@@ -48,12 +48,13 @@ export default function ContactFormHybrid({
                   required
                   class="w-full px-4 py-3 border-0 rounded-xl focus:bg-transparent focus:border focus:border-gray-400 focus:outline-none font-sans"
                   style="background-color: #F5F5F5; color: #1F2937;"
+                  data-i18n="contactFormNomePlaceholder"
                   placeholder="Seu nome completo"
                 />
               </div>
 
               <div>
-                <label for="email" class="block text-sm font-medium text-gray-700 mb-2 font-sans">
+                <label for="email" class="block text-sm font-medium text-gray-700 mb-2 font-sans" data-i18n="contactFormEmail">
                   Email
                 </label>
                 <input
@@ -63,12 +64,13 @@ export default function ContactFormHybrid({
                   required
                   class="w-full px-4 py-3 border-0 rounded-xl focus:bg-transparent focus:border focus:border-gray-400 focus:outline-none font-sans"
                   style="background-color: #F5F5F5; color: #1F2937;"
+                  data-i18n="contactFormEmailPlaceholder"
                   placeholder="seu@email.com"
                 />
               </div>
 
               <div>
-                <label for="mensagem" class="block text-sm font-medium text-gray-700 mb-2 font-sans">
+                <label for="mensagem" class="block text-sm font-medium text-gray-700 mb-2 font-sans" data-i18n="contactFormMensagem">
                   Mensagem
                 </label>
                 <textarea
@@ -78,6 +80,7 @@ export default function ContactFormHybrid({
                   required
                   class="w-full px-4 py-3 border-0 rounded-xl focus:bg-transparent focus:border focus:border-gray-400 focus:outline-none resize-none font-sans"
                   style="background-color: #F5F5F5; color: #1F2937;"
+                  data-i18n="contactFormMensagemPlaceholder"
                   placeholder="Conte-nos sobre seu projeto ou dúvida..."
                 ></textarea>
               </div>
@@ -86,6 +89,7 @@ export default function ContactFormHybrid({
                 type="button"
                 id="submitBtn"
                 class="w-full bg-black hover:bg-gray-800 text-white font-medium py-3 px-6 rounded-xl transition-all duration-200 font-mono"
+                data-i18n="contactFormSubmit"
               >
                 Enviar Mensagem
               </button>
@@ -98,10 +102,10 @@ export default function ContactFormHybrid({
         <div class="block lg:hidden py-8">
           {/* Textos no topo */}
           <div class="text-center mb-8 scroll-animate" style="opacity: 0; transform: translateY(30px); transition: opacity 0.8s ease-out, transform 0.8s ease-out;">
-            <h2 class="text-3xl sm:text-4xl font-normal text-white mb-4 leading-tight font-sans">
+            <h2 class="text-3xl sm:text-4xl font-normal text-white mb-4 leading-tight font-sans" data-i18n="contactFormTitle">
               {title}
             </h2>
-            <p class="text-base sm:text-lg text-white leading-relaxed px-4 font-sans">
+            <p class="text-base sm:text-lg text-white leading-relaxed px-4 font-sans" data-i18n="contactFormDescription">
               {description}
             </p>
           </div>
@@ -114,7 +118,7 @@ export default function ContactFormHybrid({
             {/* Formulário sem form tag - usando divs */}
             <div id="contactForm-mobile" class="space-y-4">
               <div>
-                <label for="nome-mobile" class="block text-sm font-medium text-gray-700 mb-2 font-sans">
+                <label for="nome-mobile" class="block text-sm font-medium text-gray-700 mb-2 font-sans" data-i18n="contactFormNome">
                   Nome Completo
                 </label>
                 <input
@@ -124,12 +128,13 @@ export default function ContactFormHybrid({
                   required
                   class="w-full px-4 py-3 border-0 rounded-xl focus:bg-transparent focus:border focus:border-gray-400 focus:outline-none font-sans"
                   style="background-color: #F5F5F5; color: #1F2937;"
+                  data-i18n="contactFormNomePlaceholder"
                   placeholder="Seu nome completo"
                 />
               </div>
 
               <div>
-                <label for="email-mobile" class="block text-sm font-medium text-gray-700 mb-2 font-sans">
+                <label for="email-mobile" class="block text-sm font-medium text-gray-700 mb-2 font-sans" data-i18n="contactFormEmail">
                   Email
                 </label>
                 <input
@@ -139,12 +144,13 @@ export default function ContactFormHybrid({
                   required
                   class="w-full px-4 py-3 border-0 rounded-xl focus:bg-transparent focus:border focus:border-gray-400 focus:outline-none font-sans"
                   style="background-color: #F5F5F5; color: #1F2937;"
+                  data-i18n="contactFormEmailPlaceholder"
                   placeholder="seu@email.com"
                 />
               </div>
 
               <div>
-                <label for="mensagem-mobile" class="block text-sm font-medium text-gray-700 mb-2 font-sans">
+                <label for="mensagem-mobile" class="block text-sm font-medium text-gray-700 mb-2 font-sans" data-i18n="contactFormMensagem">
                   Mensagem
                 </label>
                 <textarea
@@ -154,6 +160,7 @@ export default function ContactFormHybrid({
                   required
                   class="w-full px-4 py-3 border-0 rounded-xl focus:bg-transparent focus:border focus:border-gray-400 focus:outline-none resize-none font-sans"
                   style="background-color: #F5F5F5; color: #1F2937;"
+                  data-i18n="contactFormMensagemPlaceholder"
                   placeholder="Conte-nos sobre seu projeto ou dúvida..."
                 ></textarea>
               </div>
@@ -162,6 +169,7 @@ export default function ContactFormHybrid({
                 type="button"
                 id="submitBtn-mobile"
                 class="w-full bg-black hover:bg-gray-800 text-white font-medium py-3 px-6 rounded-xl transition-all duration-200 font-mono"
+                data-i18n="contactFormSubmit"
               >
                 Enviar Mensagem
               </button>
@@ -367,12 +375,14 @@ export default function ContactFormHybrid({
             
             // Validar dados
             if (!data.nome || !data.email || !data.mensagem) {
-              showMessage('Todos os campos são obrigatórios.', false);
+              const errorMsg = window.DerivaI18n?.t('contactFormErrorRequired') || 'Todos os campos são obrigatórios.';
+              showMessage(errorMsg, false);
               return;
             }
             
             currentSubmitBtn.disabled = true;
-            currentSubmitBtn.textContent = 'Enviando...';
+            const sendingText = window.DerivaI18n?.t('contactFormSending') || 'Enviando...';
+            currentSubmitBtn.textContent = sendingText;
             
             try {
               console.log('🔄 Enviando via Deco Action...');
@@ -402,7 +412,8 @@ export default function ContactFormHybrid({
               console.log('✅ Sucesso via Action:', result);
               
               if (result.success) {
-                showMessage(result.message, true);
+                const successMsg = window.DerivaI18n?.t('contactFormSuccess') || 'Mensagem enviada com sucesso!';
+                showMessage(successMsg, true);
                 
                 // Limpar formulário
                 nomeInput.value = '';
@@ -414,10 +425,12 @@ export default function ContactFormHybrid({
               
             } catch (error) {
               console.error('❌ Erro:', error);
-              showMessage('Erro ao enviar mensagem. Tente novamente.', false);
+              const errorMsg = window.DerivaI18n?.t('contactFormErrorSend') || 'Erro ao enviar mensagem. Tente novamente.';
+              showMessage(errorMsg, false);
             } finally {
               currentSubmitBtn.disabled = false;
-              currentSubmitBtn.textContent = 'Enviar Mensagem';
+              const submitText = window.DerivaI18n?.t('contactFormSubmit') || 'Enviar Mensagem';
+              currentSubmitBtn.textContent = submitText;
             }
             });
             

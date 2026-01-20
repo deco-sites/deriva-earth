@@ -255,15 +255,15 @@ export default function Services({
           {/* Header Content */}
           <div class="text-center space-y-8">
             <div class="space-y-12">
-              <p class="eyebrow-text">
+              <p class="eyebrow-text" data-i18n="servicesSubtitle">
                 {subtitle}
               </p>
-              <h2 class="text-white title-text">
+              <h2 class="text-white title-text" data-i18n="servicesTitle">
                 {title}
               </h2>
             </div>
             <div style="margin-top: 32px;">
-              <p class="text-lg leading-relaxed subtitle-text" style="color: rgba(255, 255, 255, 0.85);">
+              <p class="text-lg leading-relaxed subtitle-text" style="color: rgba(255, 255, 255, 0.85);" data-i18n="servicesDescription">
                 {description}
               </p>
             </div>
@@ -316,12 +316,12 @@ export default function Services({
                         )}
                       </div>
                       {/* Título do serviço */}
-                      <h3 class="text-xl font-mono font-normal text-white group-open:text-white/90 transition-colors uppercase tracking-wide whitespace-nowrap">
+                      <h3 class="text-xl font-mono font-normal text-white group-open:text-white/90 transition-colors uppercase tracking-wide whitespace-nowrap" data-i18n={index === 0 ? "serviceDerivativeTitle" : index === 1 ? "serviceEstudioTitle" : "serviceSimbioseTitle"}>
                         {service.title}
                       </h3>
                       
                       {/* Subtítulo do serviço */}
-                      <p class="text-base font-sans italic ml-12" style="color: rgba(243, 245, 245, 0.7);">
+                      <p class="text-base font-sans italic ml-12" style="color: rgba(243, 245, 245, 0.7);" data-i18n={index === 0 ? "serviceDerivativeSubtitle" : index === 1 ? "serviceEstudioSubtitle" : "serviceSimbioseSubtitle"}>
                         {service.subtitle || ""}
                       </p>
                     </div>
@@ -394,7 +394,7 @@ export default function Services({
                       
                       {/* Content Area */}
                       <div class="flex-1 space-y-6">
-                        <p class="leading-relaxed service-description-short text-base" style="color: #F3F5F5;">
+                        <p class="leading-relaxed service-description-short text-base" style="color: #F3F5F5;" data-i18n={index === 0 ? "serviceDerivativeDesc" : index === 1 ? "serviceEstudioDesc" : "serviceSimbioseDesc"}>
                           {service.description}
                         </p>
                         

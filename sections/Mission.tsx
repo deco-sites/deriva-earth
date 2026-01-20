@@ -41,12 +41,12 @@ export default function Mission({
         <div class="container mx-auto px-4 lg:px-8 relative z-10 h-full flex flex-col">
           <div class="text-center max-w-4xl mx-auto flex-1 flex flex-col justify-center">
             {/* Eyebrow */}
-            <p class="font-bold text-sm uppercase tracking-wider mb-6 text-white opacity-0 translate-y-8 transition-all duration-1000 ease-out scroll-animate">
+            <p class="font-bold text-sm uppercase tracking-wider mb-6 text-white opacity-0 translate-y-8 transition-all duration-1000 ease-out scroll-animate" data-i18n="missionEyebrow">
               {eyebrow}
             </p>
 
             {/* Mission Text with Word-by-Word Focus Effect */}
-            <div id="mission-container" class="font-mono font-normal text-4xl lg:text-5xl xl:text-6xl tracking-tight leading-none text-white opacity-0 translate-y-8 transition-all duration-1000 ease-out delay-200 scroll-animate">
+            <div id="mission-container" class="font-mono font-normal text-4xl lg:text-5xl xl:text-6xl tracking-tight leading-none text-white opacity-0 translate-y-8 transition-all duration-1000 ease-out delay-200 scroll-animate" data-i18n="missionText">
               {mission.split(' ').map((word, index) => (
                 <span 
                   key={index}
@@ -69,7 +69,7 @@ export default function Mission({
             
             {/* Eyebrow for problem section */}
             <div class="text-center mb-12 opacity-0 translate-y-8 transition-all duration-1000 ease-out delay-300 scroll-animate">
-              <p class="font-bold text-sm uppercase tracking-wider text-white">
+              <p class="font-bold text-sm uppercase tracking-wider text-white" data-i18n="missionProblem">
                 O PROBLEMA
               </p>
             </div>
@@ -77,10 +77,10 @@ export default function Mission({
             <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-12 relative opacity-0 translate-y-8 transition-all duration-1000 ease-out delay-400 scroll-animate">
               {/* Info 1 */}
               <div class="text-center">
-                <h3 class="text-white font-mono font-medium text-lg lg:text-xl tracking-tight leading-tight mb-3">
+                <h3 class="text-white font-mono font-medium text-lg lg:text-xl tracking-tight leading-tight mb-3" data-i18n="missionCard1Title">
                   PESCA FANTASMA
                 </h3>
-                <p class="text-white/70 text-sm lg:text-base leading-relaxed">
+                <p class="text-white/70 text-sm lg:text-base leading-relaxed" data-i18n="missionCard1Desc">
                   Redes de pesca são abandonadas, perdidas ou descartadas nos mares, gerando a morte de milhares de animais.
                 </p>
               </div>
@@ -92,10 +92,10 @@ export default function Mission({
 
               {/* Info 2 */}
               <div class="text-center">
-                <h3 class="text-white font-mono font-medium text-lg lg:text-xl tracking-tight leading-tight mb-3">
+                <h3 class="text-white font-mono font-medium text-lg lg:text-xl tracking-tight leading-tight mb-3" data-i18n="missionCard2Title">
                   +640 MIL TONELADAS
                 </h3>
-                <p class="text-white/70 text-sm lg:text-base leading-relaxed">
+                <p class="text-white/70 text-sm lg:text-base leading-relaxed" data-i18n="missionCard2Desc">
                   de materiais de pesca são descartados anualmente nos mares
                 </p>
               </div>
@@ -107,10 +107,10 @@ export default function Mission({
 
               {/* Info 3 */}
               <div class="text-center">
-                <h3 class="text-white font-mono font-medium text-lg lg:text-xl tracking-tight leading-tight mb-3">
+                <h3 class="text-white font-mono font-medium text-lg lg:text-xl tracking-tight leading-tight mb-3" data-i18n="missionCard3Title">
                   +69 MIL ANIMAIS
                 </h3>
-                <p class="text-white/70 text-sm lg:text-base leading-relaxed">
+                <p class="text-white/70 text-sm lg:text-base leading-relaxed" data-i18n="missionCard3Desc">
                   marinhos podem ser afetados diariamente no Brasil
                 </p>
               </div>

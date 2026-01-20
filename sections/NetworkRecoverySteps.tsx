@@ -81,12 +81,12 @@ export default function NetworkRecoverySteps({
         <div class="mb-12 lg:mb-16">
           <div class="max-w-4xl mx-auto text-center">
             {/* Eyebrow */}
-            <p class="font-mono font-normal text-base uppercase tracking-wider mb-4" style="color: #A1ACAA;">
+            <p class="font-mono font-normal text-base uppercase tracking-wider mb-4" style="color: #A1ACAA;" data-i18n="networkEyebrow">
               OPERAÇÃO
             </p>
 
             {/* Título */}
-            <h2 class="text-snow-white font-sans font-normal text-4xl lg:text-6xl xl:text-7xl tracking-tight leading-none mb-6" style="font-size: clamp(3rem, 6vw, 5rem);">
+            <h2 class="text-snow-white font-sans font-normal text-4xl lg:text-6xl xl:text-7xl tracking-tight leading-none mb-6" style="font-size: clamp(3rem, 6vw, 5rem);" data-i18n="networkTitle">
               Sistema Regenerativo
             </h2>
 
@@ -94,6 +94,7 @@ export default function NetworkRecoverySteps({
             <p 
               class="text-base lg:text-lg leading-relaxed font-sans mx-auto"
               style="color: #A1ACAA; max-width: 800px;"
+              data-i18n="networkDescription"
             >
               Nosso modelo interrompe ciclos de degradação e, com o tempo, cria condições para restaurar e fortalecer ecossistemas naturais e comunidades.
             </p>
@@ -111,13 +112,13 @@ export default function NetworkRecoverySteps({
                 {/* Conteúdo Principal que muda - Posicionado no topo */}
                 <div class="flex flex-col space-y-3 max-w-md">
                   {/* Eyebrow */}
-                  <p class="font-bold text-sm uppercase tracking-wider" style="color: #A1ACAA;">
+                  <p class="font-bold text-sm uppercase tracking-wider" style="color: #A1ACAA;" data-i18n="networkEyebrow">
                     {eyebrow}
                   </p>
 
                   {/* Título Dinâmico */}
                   <div id="step-title" class="transition-all duration-500 ease-in-out">
-                    <h2 class="text-snow-white font-mono font-normal text-xl lg:text-2xl xl:text-3xl tracking-tight leading-none">
+                    <h2 class="text-snow-white font-mono font-normal text-xl lg:text-2xl xl:text-3xl tracking-tight leading-none" data-i18n="networkStep1Title">
                       {steps[0].title}
                     </h2>
                   </div>
@@ -127,6 +128,7 @@ export default function NetworkRecoverySteps({
                     <p 
                       class="text-base lg:text-lg leading-relaxed font-sans max-w-md"
                       style="color: #A1ACAA;"
+                      data-i18n="networkStep1Desc"
                     >
                       {steps[0].subtitle}
                     </p>
@@ -200,9 +202,14 @@ export default function NetworkRecoverySteps({
 
               console.log('✅ Elementos encontrados, atualizando para:', step.title);
 
-              // Update imediato sem fade
-              titleEl.innerHTML = '<h2 class="text-snow-white font-mono font-normal text-xl lg:text-2xl xl:text-3xl tracking-tight leading-none">' + step.title + '</h2>';
-              subtitleEl.innerHTML = '<p class="text-base lg:text-lg leading-relaxed font-sans max-w-md" style="color: #A1ACAA;">' + step.subtitle + '</p>';
+              // Update imediato sem fade com tradução
+              const titleKey = 'networkStep' + (stepIndex + 1) + 'Title';
+              const subtitleKey = 'networkStep' + (stepIndex + 1) + 'Desc';
+              const titleText = window.DerivaI18n?.t(titleKey) || step.title;
+              const subtitleText = window.DerivaI18n?.t(subtitleKey) || step.subtitle;
+              
+              titleEl.innerHTML = '<h2 class="text-snow-white font-mono font-normal text-xl lg:text-2xl xl:text-3xl tracking-tight leading-none" data-i18n="' + titleKey + '">' + titleText + '</h2>';
+              subtitleEl.innerHTML = '<p class="text-base lg:text-lg leading-relaxed font-sans max-w-md" style="color: #A1ACAA;" data-i18n="' + subtitleKey + '">' + subtitleText + '</p>';
               
               // Force video update
               videoEl.src = step.videoUrl;
@@ -448,7 +455,7 @@ function StepsProgress({ totalSteps, stepDuration }: { totalSteps: number; stepD
         
         {/* Círculo central com cor sólida e z-index alto */}
         <div class="absolute inset-12 w-24 h-24 rounded-full bg-[#2F2D2C] flex items-center justify-center z-20">
-          <span class="text-snow-white text-xs font-medium">SISTEMA</span>
+          <span class="text-snow-white text-xs font-medium" data-i18n="networkSystem">SISTEMA</span>
         </div>
         
         {/* Setor ativo - apenas no arco externo */}

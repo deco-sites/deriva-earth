@@ -53,7 +53,7 @@ export default function Derivative({
             </div>
 
             {/* Subtitle */}
-            <p class="text-xl lg:text-2xl leading-relaxed mb-6 font-sans max-w-2xl" style="margin-top: -10px; color: #4A4A4A !important;">
+            <p class="text-xl lg:text-2xl leading-relaxed mb-6 font-sans max-w-2xl" style="margin-top: -10px; color: #4A4A4A !important;" data-i18n="derivativeSubtitle">
               Material que nasce da união de <strong style="font-weight: 600 !important; font-style: italic !important; color: #4A4A4A !important;">redes de pesca</strong> interceptadas e de <strong style="font-weight: 600 !important; font-style: italic !important; color: #4A4A4A !important;">resíduos têxteis</strong> pré-consumo
             </p>
 
@@ -69,7 +69,7 @@ export default function Derivative({
                         style="width: 32px !important; height: 32px !important;"
                       />
                     </div>
-                    <span style="color: #4A4A4A !important; font-family: 'Inter', sans-serif !important; font-size: 18px !important; font-weight: 500 !important; line-height: 1.5 !important;">
+                    <span style="color: #4A4A4A !important; font-family: 'Inter', sans-serif !important; font-size: 18px !important; font-weight: 500 !important; line-height: 1.5 !important;" data-i18n={`derivativeBenefit${index + 1}`}>
                       {benefit.text}
                     </span>
                   </div>
@@ -145,8 +145,8 @@ export default function Derivative({
             {/* Card 1 - Redes Danificadas */}
           <div class="bg-mineral-black rounded-2xl h-[400px] flex flex-col items-center" style="width: 380px;">
             <div class="flex flex-col justify-center flex-1 gap-2 px-6 py-3 w-full">
-                <p class="text-fog-gray font-bold text-sm">Resíduo</p>
-                <h3 class="text-snow-white font-mono font-medium text-base tracking-tight leading-tight">
+                <p class="text-fog-gray font-bold text-sm" data-i18n="derivativeResiduo">Resíduo</p>
+                <h3 class="text-snow-white font-mono font-medium text-base tracking-tight leading-tight" data-i18n="derivativeResiduoTitle">
                   REDES DANIFICADAS E RESÍDUOS TÊXTEIS
                 </h3>
               </div>
@@ -168,8 +168,8 @@ export default function Derivative({
           {/* Card 2 - Pellets */}
           <div class="bg-mineral-black rounded-2xl h-[400px] flex flex-col items-center" style="width: 380px;">
               <div class="flex flex-col gap-2 px-6 py-3 w-full">
-                <p class="text-fog-gray font-bold text-sm">Matéria-prima</p>
-                <h3 class="text-snow-white font-mono font-medium text-base tracking-tight leading-tight">
+                <p class="text-fog-gray font-bold text-sm" data-i18n="derivativeMateriaPrima">Matéria-prima</p>
+                <h3 class="text-snow-white font-mono font-medium text-base tracking-tight leading-tight" data-i18n="derivativeMateriaPrimaTitle">
                   DERIVATIVE®
                 </h3>
               </div>
@@ -191,8 +191,8 @@ export default function Derivative({
           {/* Card 3 - Produtos */}
           <div class="bg-mineral-black rounded-2xl h-[400px] flex flex-col items-center" style="width: 380px;">
               <div class="flex flex-col gap-2 px-6 py-3 w-full">
-                <p class="text-fog-gray font-bold text-sm">PRODUTOS</p>
-                <h3 id="product-title-desktop" class="text-snow-white font-mono font-medium text-base tracking-tight leading-tight">
+                <p class="text-fog-gray font-bold text-sm" data-i18n="derivativeProdutos">PRODUTOS</p>
+                <h3 id="product-title-desktop" class="text-snow-white font-mono font-medium text-base tracking-tight leading-tight" data-i18n="derivativeProduto1">
                   ARMAÇÃO DE ÓCULOS
                 </h3>
               </div>
@@ -282,10 +282,10 @@ export default function Derivative({
             {/* Card 2 - Pellets */}
             <div class="bg-mineral-black rounded-2xl h-[300px] flex flex-col items-center w-full max-w-sm">
                 <div class="flex flex-col gap-2 px-4 py-3 w-full">
-                  <p class="text-fog-gray font-bold text-sm">Matéria-prima</p>
-                  <h3 class="text-snow-white font-mono font-medium text-base tracking-tight leading-tight">
-                    DERIVATIVE®
-                  </h3>
+                <p class="text-fog-gray font-bold text-sm" data-i18n="derivativeMateriaPrima">Matéria-prima</p>
+                <h3 class="text-snow-white font-mono font-medium text-base tracking-tight leading-tight" data-i18n="derivativeMateriaPrimaTitle">
+                  DERIVATIVE®
+                </h3>
                 </div>
               {/* 3D Animation Container */}
               <div style="width: 80%; height: 240px; border-radius: 0.5rem; margin-bottom: 0.5rem; overflow: hidden; position: relative; background-color: transparent;">
@@ -305,8 +305,8 @@ export default function Derivative({
             {/* Card 3 - Produtos */}
             <div class="bg-mineral-black rounded-2xl h-[300px] flex flex-col items-center w-full max-w-sm">
                 <div class="flex flex-col gap-2 px-4 py-3 w-full">
-                  <p class="text-fog-gray font-bold text-sm">PRODUTOS</p>
-                  <h3 id="product-title-mobile" class="text-snow-white font-mono font-medium text-base tracking-tight leading-tight">
+                  <p class="text-fog-gray font-bold text-sm" data-i18n="derivativeProdutos">PRODUTOS</p>
+                  <h3 id="product-title-mobile" class="text-snow-white font-mono font-medium text-base tracking-tight leading-tight" data-i18n="derivativeProduto1">
                     ARMAÇÃO DE ÓCULOS
                   </h3>
                 </div>
@@ -1377,8 +1377,16 @@ export default function Derivative({
                 
                 if (videos.length === 0) return;
                 
-                // Product titles for each video
-                const productTitles = ['ARMAÇÃO DE ÓCULOS', 'RELÓGIO', 'SEU PRODUTO'];
+                // Product titles for each video - usar traduções
+                const getProductTitle = (index) => {
+                  const keys = ['derivativeProduto1', 'derivativeProduto2', 'derivativeProduto3'];
+                  return window.DerivaI18n?.t(keys[index]) || ['ARMAÇÃO DE ÓCULOS', 'RELÓGIO', 'SEU PRODUTO'][index];
+                };
+                
+                // Função para obter títulos atualizados
+                const getProductTitles = () => {
+                  return [getProductTitle(0), getProductTitle(1), getProductTitle(2)];
+                };
                 
                 // Auto-play functionality
                 function startAutoPlay() {
@@ -1426,10 +1434,11 @@ export default function Derivative({
                     }
                   });
                   
-                  // Update product title
+                  // Update product title com tradução atualizada
                   if (titleElement) {
-                    titleElement.textContent = productTitles[index];
-                    console.log(\`Updated \${type} title to: \${productTitles[index]}\`);
+                    const currentTitles = getProductTitles();
+                    titleElement.textContent = currentTitles[index];
+                    console.log(\`Updated \${type} title to: \${currentTitles[index]}\`);
                   }
                   
                   // Update dots
@@ -1454,6 +1463,15 @@ export default function Derivative({
                 // Initialize first video
                 showVideo(0, type);
                 startAutoPlay();
+                
+                // Atualizar títulos quando idioma mudar
+                window.addEventListener('languageChanged', () => {
+                  // Atualizar título atual
+                  if (titleElement) {
+                    const currentTitles = getProductTitles();
+                    titleElement.textContent = currentTitles[carouselStates[type].currentIndex];
+                  }
+                });
                 
                 // Pause auto-play on hover/touch
                 const container = videos[0].closest('.video-lighten');

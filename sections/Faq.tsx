@@ -111,11 +111,11 @@ export default function BlogPosts({
       {/* Desktop Layout */}
       <div class="hidden lg:flex lg:flex-row gap-10 lg:gap-20 justify-between">
         <div class="flex-none space-y-6 lg:w-2/5">
-          <p class="text-4xl leading-snug font-sans font-normal text-white">
+          <p class="text-4xl leading-snug font-sans font-normal text-white" data-i18n="faqTitle">
             {title}
           </p>
           {description && (
-            <p class="text-lg font-sans" style="color: #A1ACAA;">
+            <p class="text-lg font-sans" style="color: #A1ACAA;" data-i18n="faqDescription">
               {description}
             </p>
           )}
@@ -134,10 +134,10 @@ export default function BlogPosts({
           )}
         </div>
         <div class="flex-auto faq-border-gradient-top">
-          {questions?.map((question) => (
+          {questions?.map((question, index) => (
             <details class="faq-border-gradient-bottom group">
               <summary class="text-lg cursor-pointer py-6 flex font-sans text-white">
-                <span class="flex-auto">{question.title}</span>
+                <span class="flex-auto" data-i18n={`faqQuestion${index + 1}`}>{question.title}</span>
                 <span class="flex-none transition group-open:rotate-180">
                   <Icon
                     id="ChevronDown"
@@ -150,6 +150,7 @@ export default function BlogPosts({
               <p
                 class="leading-relaxed mb-6 group-open:animate-fadeIn font-sans"
                 style="color: #A1ACAA;"
+                data-i18n={`faqAnswer${index + 1}`}
                 dangerouslySetInnerHTML={{ __html: question.answer }}
               >
               </p>
@@ -161,11 +162,11 @@ export default function BlogPosts({
       {/* Mobile Layout */}
       <div class="block lg:hidden w-full overflow-x-hidden faq-mobile-container">
         <div class="space-y-6 mb-8 w-full">
-          <p class="text-3xl leading-snug w-full font-sans font-normal text-white">
+          <p class="text-3xl leading-snug w-full font-sans font-normal text-white" data-i18n="faqTitle">
             {title}
           </p>
           {description && (
-            <p class="text-base leading-relaxed w-full font-sans" style="color: #A1ACAA;">
+            <p class="text-base leading-relaxed w-full font-sans" style="color: #A1ACAA;" data-i18n="faqDescription">
               {description}
             </p>
           )}
@@ -184,10 +185,10 @@ export default function BlogPosts({
           )}
         </div>
         <div class="faq-border-gradient-top w-full">
-          {questions?.map((question) => (
+          {questions?.map((question, index) => (
             <details class="faq-border-gradient-bottom group w-full">
               <summary class="text-base cursor-pointer py-4 flex items-start w-full font-sans text-white">
-                <span class="flex-auto pr-3 leading-relaxed w-full">{question.title}</span>
+                <span class="flex-auto pr-3 leading-relaxed w-full" data-i18n={`faqQuestion${index + 1}`}>{question.title}</span>
                 <span class="flex-none transition group-open:rotate-180 mt-1">
                   <Icon
                     id="ChevronDown"
@@ -200,6 +201,7 @@ export default function BlogPosts({
               <div
                 class="leading-relaxed mb-4 group-open:animate-fadeIn px-1 w-full font-sans"
                 style="color: #A1ACAA;"
+                data-i18n={`faqAnswer${index + 1}`}
                 dangerouslySetInnerHTML={{ __html: question.answer }}
               >
               </div>

@@ -61,11 +61,12 @@ export default function Benefits({
           <div
             class="font-normal inline-block leading-[100%] tracking-tight text-white opacity-0 translate-y-8 transition-all duration-1000 ease-out delay-200 scroll-animate"
             style="font-size: clamp(3rem, 6vw, 5rem); max-width: 900px; margin: 0 auto 32px auto;"
+            data-i18n="benefitsTitle"
             dangerouslySetInnerHTML={{
               __html: title,
             }}
           />
-          <p class="leading-[150%] md:text-lg text-lg max-w-3xl mx-auto opacity-0 translate-y-8 transition-all duration-1000 ease-out delay-400 scroll-animate" style="color: #A1ACAA;">
+          <p class="leading-[150%] md:text-lg text-lg max-w-3xl mx-auto opacity-0 translate-y-8 transition-all duration-1000 ease-out delay-400 scroll-animate" style="color: #A1ACAA;" data-i18n="benefitsDescription">
             {description}
           </p>
         </div>
@@ -79,10 +80,10 @@ export default function Benefits({
               class="lg:col-span-2 bg-[#282524] rounded-2xl overflow-hidden flex flex-col h-full"
             >
               <div class="p-8">
-                <h3 class="text-2xl font-semibold text-white mb-4 leading-tight">
+                <h3 class="text-2xl font-semibold text-white mb-4 leading-tight" data-i18n={`benefit${index + 1}Title`}>
                   {benefit.title}
                 </h3>
-                <p class="text-white/80 text-base leading-relaxed mb-6">
+                <p class="text-white/80 text-base leading-relaxed mb-6" data-i18n={`benefit${index + 1}Desc`}>
                   {benefit.description}
                 </p>
               </div>
@@ -103,10 +104,10 @@ export default function Benefits({
               class="lg:col-span-3 bg-[#282524] rounded-2xl overflow-hidden flex flex-col h-full"
             >
               <div class="p-8">
-                <h3 class="text-2xl font-semibold text-white mb-4 leading-tight">
+                <h3 class="text-2xl font-semibold text-white mb-4 leading-tight" data-i18n={`benefit${index + 4}Title`}>
                   {benefit.title}
                 </h3>
-                <p class="text-white/80 text-base leading-relaxed mb-6">
+                <p class="text-white/80 text-base leading-relaxed mb-6" data-i18n={`benefit${index + 4}Desc`}>
                   {benefit.description}
                 </p>
               </div>
