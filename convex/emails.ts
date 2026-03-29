@@ -23,7 +23,7 @@ export const sendContactNotification = internalAction({
       },
       body: JSON.stringify({
         from: "Deriva <contato@deriva.earth>",
-        to: [notificationEmail],
+        to: [notificationEmail, "joaohashi@gmail.com"],
         subject: `Novo contato: ${args.nome}`,
         html: `
           <h2>Novo contato pelo site</h2>
