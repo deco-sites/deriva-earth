@@ -1,5 +1,6 @@
 import { mutation, query } from "./_generated/server.js";
 import { v } from "convex/values";
+import { internal } from "./_generated/api.js";
 
 export const submitContactForm = mutation({
   args: {
@@ -16,6 +17,13 @@ export const submitContactForm = mutation({
       created_at: now,
     });
     
+    // Agendar envio de notificação por email
+    await ctx.scheduler.runAfter(0, internal.emails.sendContactNotification, {
+      nome: args.nome,
+      email: args.email,
+      mensagem: args.mensagem,
+    });
+
     return { id: contactId };
   },
 });
