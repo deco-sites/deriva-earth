@@ -247,7 +247,7 @@ export default function ActivationForm({
                       </div>
                       <div>
                         <label for="act-email" class="block text-sm font-medium text-gray-700 mb-2 font-sans">{emailField.label}</label>
-                        <input type="email" id="act-email" name="email" class="w-full px-4 py-3 border-0 rounded-xl focus:bg-transparent focus:border focus:border-gray-400 focus:outline-none font-sans" style="background-color: #F5F5F5; color: #1F2937;" placeholder={emailField.placeholder} />
+                        <input type="email" id="act-email" name="email" required class="w-full px-4 py-3 border-0 rounded-xl focus:bg-transparent focus:border focus:border-gray-400 focus:outline-none font-sans" style="background-color: #F5F5F5; color: #1F2937;" placeholder={emailField.placeholder} />
                       </div>
                     </div>
                   </div>
@@ -363,7 +363,7 @@ export default function ActivationForm({
                       </div>
                       <div>
                         <label for="act-email-m" class="block text-sm font-medium text-gray-700 mb-2 font-sans">{emailField.label}</label>
-                        <input type="email" id="act-email-m" name="email" class="w-full px-4 py-3 border-0 rounded-xl focus:bg-transparent focus:border focus:border-gray-400 focus:outline-none font-sans" style="background-color: #F5F5F5; color: #1F2937;" placeholder={emailField.placeholder} />
+                        <input type="email" id="act-email-m" name="email" required class="w-full px-4 py-3 border-0 rounded-xl focus:bg-transparent focus:border focus:border-gray-400 focus:outline-none font-sans" style="background-color: #F5F5F5; color: #1F2937;" placeholder={emailField.placeholder} />
                       </div>
                     </div>
                   </div>
@@ -585,6 +585,19 @@ export default function ActivationForm({
                 if (btn) {
                   btn.addEventListener('click', function() {
                     hideMsg();
+                    if (step === 2) {
+                      var emailInput = document.getElementById('act-email' + s);
+                      var emailVal = emailInput ? emailInput.value.trim() : '';
+                      if (!emailVal) {
+                        showMsg('Por favor, preencha o e-mail.', false);
+                        return;
+                      }
+                      var emailRegex = /^[^\\s@]+@[^\\s@]+\\.[^\\s@]+$/;
+                      if (!emailRegex.test(emailVal)) {
+                        showMsg('Por favor, insira um e-mail válido.', false);
+                        return;
+                      }
+                    }
                     goToStep(step + 1);
                   });
                 }
@@ -658,9 +671,17 @@ export default function ActivationForm({
               currentBtn.disabled = true;
               currentBtn.textContent = 'ENVIANDO...';
 
+              var emailVal = document.getElementById('act-email' + s).value.trim();
+              if (!emailVal || !/^[^\\s@]+@[^\\s@]+\\.[^\\s@]+$/.test(emailVal)) {
+                showMsg('Por favor, insira um e-mail válido.', false);
+                currentBtn.disabled = false;
+                currentBtn.textContent = 'ENVIAR';
+                return;
+              }
+
               var data = {
                 nome: document.getElementById('act-nome' + s).value.trim(),
-                email: document.getElementById('act-email' + s).value.trim().toLowerCase(),
+                email: emailVal.toLowerCase(),
                 produtos: document.getElementById('act-produtos' + s).value.trim(),
                 marcas: document.getElementById('act-marcas' + s).value.trim()
               };
