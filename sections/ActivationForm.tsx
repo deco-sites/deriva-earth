@@ -176,7 +176,7 @@ export default function ActivationForm({
       <div class="absolute inset-0 z-0" style="background: linear-gradient(180deg, #1D1B1D 0%, #2a2528 50%, #1D1B1D 100%);">
         {/* Mobile: static background image */}
         <div id="bg-image-container" class="absolute inset-0 lg:hidden" style="opacity: 0; transition: opacity 1s ease-out;">
-          <img src="https://assets.decocache.com/deriva-earth/5ce777c7-bded-40fd-9c88-7d6fb056f8ac/fundo.png" alt="" style="width:100%;height:100%;object-fit:cover;opacity:0.3;" />
+          <img src="https://assets.decocache.com/deriva-earth/5ce777c7-bded-40fd-9c88-7d6fb056f8ac/fundo.png" alt="" style="width:100%;height:100%;object-fit:cover;opacity:0.6;" />
         </div>
         {/* Desktop: background video */}
         <div id="bg-video-container" class="absolute inset-0 hidden lg:block" style="opacity: 0; transition: opacity 1s ease-out;" dangerouslySetInnerHTML={{ __html: `
