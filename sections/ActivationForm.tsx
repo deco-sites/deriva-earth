@@ -182,10 +182,9 @@ export default function ActivationForm({
 
       {/* Loading screen */}
       <div id="loading-screen" class="absolute inset-0 z-50 flex items-center justify-center" style="background-color: #1D1B1D;">
-        <div class="h-40 lg:h-48" style="mix-blend-mode: screen;" dangerouslySetInnerHTML={{ __html: `
-          <video id="loading-video" src="https://assets.decocache.com/deriva-earth/d192798e-7bb1-475b-b79d-2622051e839b/animation.mp4" autoplay muted playsinline webkit-playsinline preload="auto" style="height:100%;width:auto;"></video>
-          <script>(function(){var v=document.getElementById('loading-video');if(v){v.muted=true;v.play().catch(function(){});}})();</script>
-        `}} />
+        <div class="h-40 lg:h-48" style="mix-blend-mode: screen;">
+          <img id="loading-gif" src="https://assets.decocache.com/deriva-earth/82ec37fa-e57d-4e56-ac80-f12eea23b03d/animation-ezgif.com-video-to-gif-converter.gif" alt="Loading" style="height: 100%; width: auto;" />
+        </div>
       </div>
 
       <style dangerouslySetInnerHTML={{ __html: `
@@ -500,7 +499,6 @@ export default function ActivationForm({
               el.setAttribute('webkit-playsinline', '');
               var p = el.play();
               if (p && p.catch) p.catch(function() {
-                // Retry after user interaction
                 document.addEventListener('touchstart', function retry() {
                   el.muted = true;
                   el.play().catch(function(){});
@@ -509,19 +507,11 @@ export default function ActivationForm({
               });
             }
 
-            var video = document.getElementById('loading-video');
-            if (video) {
-              forcePlay(video);
-              video.addEventListener('ended', dismissLoading);
-              video.addEventListener('error', dismissLoading);
-              setTimeout(dismissLoading, 5000);
-            } else {
-              dismissLoading();
-            }
+            // GIF loading animation — dismiss after 3s
+            setTimeout(dismissLoading, 3000);
 
             var bgVid = document.getElementById('bg-video');
             forcePlay(bgVid);
-            // Also try when bg becomes visible
             setTimeout(function() { forcePlay(bgVid); }, 1500);
           })();
         `
