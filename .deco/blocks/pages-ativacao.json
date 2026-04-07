@@ -1,0 +1,62 @@
+{
+  "name": "Ativação",
+  "path": "/ativacao",
+  "sections": [
+    {
+      "__resolveType": "site/sections/ActivationForm.tsx",
+      "intro": {
+        "title": "Ativação",
+        "subtitle": "Ativação confirmada.",
+        "paragraphs": [
+          "Nós somos o movimento de regeneração oceânica e agora você acabou de entrar no grupo que vai estar com o Deriva desde o início.",
+          "Antes de qualquer anúncio público, antes de qualquer lançamento oficial.",
+          "Mas pra isso funcionar de verdade, precisamos entender melhor quem você é e como a gente pode construir isso juntos."
+        ],
+        "callToAction": "Vamos lá?",
+        "buttonText": "COMEÇAR"
+      },
+      "identity": {
+        "title": "Quem é você?",
+        "nameField": {
+          "label": "Nome",
+          "placeholder": "Seu nome"
+        },
+        "emailField": {
+          "label": "E-mail",
+          "placeholder": "seu@email.com"
+        },
+        "buttonText": "PRÓXIMO"
+      },
+      "product": {
+        "title": "Produtos",
+        "productField": {
+          "label": "Produtos",
+          "description": "Nós desenvolvemos o Derivative®, matéria-prima feita de redes de pesca que estariam à deriva no oceano. Imagine, se você pudesse ter um produto feito com esse material, algo bem feito, com design, com história e impacto de verdade, qual seria?",
+          "placeholder": "Pode ser algo que você usa no dia a dia, algo para casa ou algo que você veria e pensaria 'incrível, isso tinha que existir'."
+        },
+        "buttonText": "PRÓXIMO"
+      },
+      "brand": {
+        "title": "Marcas",
+        "brandField": {
+          "label": "Marcas",
+          "description": "Quais marcas você acha que combinam com o Deriva? Marcas que você admira e acredita que fariam sentido desenvolver um projeto juntos aplicando o Derivative®.",
+          "placeholder": "Pode mandar quantas vier na cabeça."
+        },
+        "submitText": "ENVIAR"
+      },
+      "thankYou": {
+        "title": "Perfeito. Obrigado por chegar junto!",
+        "paragraphs": [
+          "Estamos aqui para regenerar o oceano e seu apoio irá nos ajudar nessa jornada.",
+          "Em breve, contaremos mais sobre o que estamos construindo. Mas por enquanto, você já tá dentro. E isso já é mais do que a maioria."
+        ],
+        "farewell": "Até logo 🌊"
+      }
+    }
+  ],
+  "__resolveType": "website/pages/Page.tsx",
+  "seo": {
+    "__resolveType": "website/sections/Seo/SeoV2.tsx"
+  }
+}
