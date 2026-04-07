@@ -191,6 +191,7 @@ export default function ActivationForm({
       </div>
 
       <style dangerouslySetInnerHTML={{ __html: `
+        html, body { overflow: hidden !important; height: 100vh !important; }
         @keyframes loadingFadeOut {
           0% { opacity: 1; }
           100% { opacity: 0; visibility: hidden; }
@@ -493,15 +494,26 @@ export default function ActivationForm({
                 bgVideo.style.opacity = '1';
               }
             }
+            // Force autoplay on mobile
             var video = document.getElementById('loading-video');
             if (video) {
+              video.setAttribute('playsinline', '');
+              video.setAttribute('muted', '');
+              video.muted = true;
+              video.play().catch(function() {});
               video.addEventListener('ended', dismissLoading);
-              // Fallback if video fails to load
               video.addEventListener('error', dismissLoading);
-              // Safety fallback after 5s
               setTimeout(dismissLoading, 5000);
             } else {
               dismissLoading();
+            }
+            // Force autoplay on background video
+            var bgVid = document.querySelector('#bg-video-container video');
+            if (bgVid) {
+              bgVid.setAttribute('playsinline', '');
+              bgVid.setAttribute('muted', '');
+              bgVid.muted = true;
+              bgVid.play().catch(function() {});
             }
           })();
         `
