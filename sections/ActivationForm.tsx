@@ -174,7 +174,12 @@ export default function ActivationForm({
   return (
     <div class="relative h-screen overflow-hidden flex flex-col" style="background-color: #1D1B1D;">
       <div class="absolute inset-0 z-0" style="background: linear-gradient(180deg, #1D1B1D 0%, #2a2528 50%, #1D1B1D 100%);">
-        <div id="bg-video-container" class="absolute inset-0" style="opacity: 0; transition: opacity 1s ease-out;" dangerouslySetInnerHTML={{ __html: `
+        {/* Mobile: static background image */}
+        <div id="bg-image-container" class="absolute inset-0 lg:hidden" style="opacity: 0; transition: opacity 1s ease-out;">
+          <img src="https://assets.decocache.com/deriva-earth/5ce777c7-bded-40fd-9c88-7d6fb056f8ac/fundo.png" alt="" style="width:100%;height:100%;object-fit:cover;opacity:0.9;" />
+        </div>
+        {/* Desktop: background video */}
+        <div id="bg-video-container" class="absolute inset-0 hidden lg:block" style="opacity: 0; transition: opacity 1s ease-out;" dangerouslySetInnerHTML={{ __html: `
           <video id="bg-video" src="https://assets.decocache.com/deriva-earth/63f76078-d3d8-46e9-8f55-bafe3c32fa6b/background2_header-(1)-(1).mp4" autoplay muted loop playsinline webkit-playsinline preload="auto" style="width:100%;height:100%;object-fit:cover;opacity:0.3;"></video>
           <script>(function(){var v=document.getElementById('bg-video');if(v){v.muted=true;v.play().catch(function(){});}})();</script>
         `}} />
@@ -476,6 +481,7 @@ export default function ActivationForm({
               var content = document.getElementById('main-content');
               var footer = document.getElementById('footer-content');
               var bgVideo = document.getElementById('bg-video-container');
+              var bgImage = document.getElementById('bg-image-container');
               if (loading) {
                 loading.style.animation = 'loadingFadeOut 0.5s ease-out forwards';
               }
@@ -489,6 +495,9 @@ export default function ActivationForm({
               }
               if (bgVideo) {
                 bgVideo.style.opacity = '1';
+              }
+              if (bgImage) {
+                bgImage.style.opacity = '1';
               }
             }
             function forcePlay(el) {
