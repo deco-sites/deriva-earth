@@ -39,8 +39,6 @@ export default async function SubmitActivationAction(
       marcas: marcas.trim(),
     });
 
-    // Notion integration is now handled inside Convex (convex/notion.ts)
-
     return {
       success: true,
       message: "Ativação registrada com sucesso!",

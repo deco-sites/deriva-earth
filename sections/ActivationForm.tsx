@@ -186,7 +186,7 @@ export default function ActivationForm({
       </div>
 
       {/* Loading screen */}
-      <div id="loading-screen" class="absolute inset-0 z-50 flex items-center justify-center" style="background-color: #1D1B1D; padding-bottom: 25vh;">
+      <div id="loading-screen" class="absolute inset-0 z-50 flex items-center justify-center" style="background-color: #1D1B1D; padding-bottom: 15vh;">
         <div class="h-40 lg:h-48" style="mix-blend-mode: screen;">
           <img id="loading-gif" src="https://assets.decocache.com/deriva-earth/82ec37fa-e57d-4e56-ac80-f12eea23b03d/animation-ezgif.com-video-to-gif-converter.gif" alt="Loading" style="height: 100%; width: auto;" />
         </div>
