@@ -78,8 +78,8 @@ export interface Props {
 }
 
 const DEFAULT_INTRO: IntroStep = {
-  title: "Ativação",
-  subtitle: "Ativação confirmada.",
+  title: "Ativação Confirmada",
+  subtitle: "",
   paragraphs: [
     "Nós somos o movimento de regeneração oceânica e agora você acabou de entrar no grupo que vai estar com o Deriva desde o início.",
     "Antes de qualquer anúncio público, antes de qualquer lançamento oficial.",
@@ -90,7 +90,7 @@ const DEFAULT_INTRO: IntroStep = {
 };
 
 const DEFAULT_IDENTITY: IdentityStep = {
-  title: "Quem é você?",
+  title: "Para mantermos contato",
   nameField: { label: "Nome", placeholder: "Seu nome" },
   emailField: { label: "E-mail", placeholder: "seu@email.com" },
   buttonText: "PRÓXIMO",
@@ -99,7 +99,7 @@ const DEFAULT_IDENTITY: IdentityStep = {
 const DEFAULT_PRODUCT: ProductStep = {
   title: "Produtos",
   productField: {
-    label: "Produtos",
+    label: "",
     description:
       "Nós desenvolvemos o Derivative®, matéria-prima feita de redes de pesca que estariam à deriva no oceano. Imagine, se você pudesse ter um produto feito com esse material, algo bem feito, com design, com história e impacto de verdade, qual seria?",
     placeholder:
@@ -111,7 +111,7 @@ const DEFAULT_PRODUCT: ProductStep = {
 const DEFAULT_BRAND: BrandStep = {
   title: "Marcas",
   brandField: {
-    label: "Marcas",
+    label: "",
     description:
       "Quais marcas você acha que combinam com o Deriva? Marcas que você admira e acredita que fariam sentido desenvolver um projeto juntos aplicando o Derivative®.",
     placeholder: "Pode mandar quantas vier na cabeça.",
@@ -120,12 +120,12 @@ const DEFAULT_BRAND: BrandStep = {
 };
 
 const DEFAULT_THANK_YOU: ThankYouStep = {
-  title: "Perfeito. Obrigado por chegar junto!",
+  title: "Obrigado por chegar junto!",
   paragraphs: [
     "Estamos aqui para regenerar o oceano e seu apoio irá nos ajudar nessa jornada.",
     "Em breve, contaremos mais sobre o que estamos construindo. Mas por enquanto, você já tá dentro. E isso já é mais do que a maioria.",
   ],
-  farewell: "Até logo 🌊",
+  farewell: "Até logo",
 };
 
 const TOTAL_STEPS = 5;
@@ -207,13 +207,13 @@ export default function ActivationForm({
             </div>
 
             <div class="w-full max-w-2xl">
-              <div class="rounded-2xl shadow-lg p-10 flex flex-col" id="card-desktop" style="background-color: #FCFAFA; max-height: calc(100vh - 160px);">
+              <div class="rounded-2xl shadow-lg p-8 pb-6 flex flex-col" id="card-desktop" style="background-color: #FCFAFA; max-height: calc(100vh - 160px);">
 
                 {/* Step 1: Intro */}
                 <div id="step-1" class="flex flex-col flex-1 min-h-0">
                   <div class="flex-1 overflow-y-auto">
                     <h1 class="text-4xl font-normal mb-3 font-sans" style="color: #1D1B1D;">{intro.title}</h1>
-                    <p class="text-xl font-medium mb-6 font-sans" style="color: #1D1B1D;">{intro.subtitle}</p>
+                    {intro.subtitle && <p class="text-xl font-medium mb-6 font-sans" style="color: #1D1B1D;">{intro.subtitle}</p>}
                     <div class="space-y-4" style="color: #4A4A4A;">
                       {intro.paragraphs?.map((p, i) => (
                         <p key={i} class="text-base leading-relaxed font-sans">{p}</p>
@@ -223,7 +223,7 @@ export default function ActivationForm({
                       )}
                     </div>
                   </div>
-                  <button type="button" id="btn-next-1" class="w-full bg-black hover:bg-gray-800 text-white font-medium py-3 px-6 rounded-xl transition-all duration-200 font-mono uppercase tracking-wider mt-6 flex-shrink-0">
+                  <button type="button" id="btn-next-1" class="w-full bg-black hover:bg-gray-800 text-white font-medium py-3 px-6 rounded-xl transition-all duration-200 font-mono uppercase tracking-wider mt-3 flex-shrink-0">
                     {intro.buttonText}
                   </button>
                 </div>
@@ -248,7 +248,7 @@ export default function ActivationForm({
                       </div>
                     </div>
                   </div>
-                  <button type="button" id="btn-next-2" class="w-full bg-black hover:bg-gray-800 text-white font-medium py-3 px-6 rounded-xl transition-all duration-200 font-mono uppercase tracking-wider mt-6 flex-shrink-0">
+                  <button type="button" id="btn-next-2" class="w-full bg-black hover:bg-gray-800 text-white font-medium py-3 px-6 rounded-xl transition-all duration-200 font-mono uppercase tracking-wider mt-3 flex-shrink-0">
                     {identity.buttonText}
                   </button>
                 </div>
@@ -260,16 +260,16 @@ export default function ActivationForm({
                     Voltar
                   </button>
                   <div class="flex-1 overflow-y-auto">
-                    <h2 class="text-2xl font-normal mb-6 font-sans" style="color: #1D1B1D;">{product.title}</h2>
+                    <h2 class="text-2xl font-normal mb-3 font-sans" style="color: #1D1B1D;">{product.title}</h2>
                     <div>
-                      <label for="act-produtos" class="block text-sm font-medium text-gray-700 mb-2 font-sans">{productField.label}</label>
+                      {productField.label && <label for="act-produtos" class="block text-sm font-medium text-gray-700 mb-2 font-sans">{productField.label}</label>}
                       {productField.description && (
-                        <p class="text-xs text-gray-500 mb-2 font-sans leading-relaxed">{productField.description}</p>
+                        <p class="text-sm text-gray-500 mb-3 font-sans leading-relaxed">{productField.description}</p>
                       )}
-                      <textarea id="act-produtos" name="produtos" rows={5} class="w-full px-4 py-3 border-0 rounded-xl focus:bg-transparent focus:border focus:border-gray-400 focus:outline-none resize-none font-sans" style="background-color: #F5F5F5; color: #1F2937;" placeholder={productField.placeholder}></textarea>
+                      <textarea id="act-produtos" name="produtos" rows={5} class="w-full px-4 py-3 border-0 rounded-xl focus:bg-transparent focus:border focus:border-gray-400 focus:outline-none resize-none font-sans text-sm" style="background-color: #F5F5F5; color: #1F2937;" placeholder={productField.placeholder}></textarea>
                     </div>
                   </div>
-                  <button type="button" id="btn-next-3" class="w-full bg-black hover:bg-gray-800 text-white font-medium py-3 px-6 rounded-xl transition-all duration-200 font-mono uppercase tracking-wider mt-6 flex-shrink-0">
+                  <button type="button" id="btn-next-3" class="w-full bg-black hover:bg-gray-800 text-white font-medium py-3 px-6 rounded-xl transition-all duration-200 font-mono uppercase tracking-wider mt-3 flex-shrink-0">
                     {product.buttonText}
                   </button>
                 </div>
@@ -281,16 +281,16 @@ export default function ActivationForm({
                     Voltar
                   </button>
                   <div class="flex-1 overflow-y-auto">
-                    <h2 class="text-2xl font-normal mb-6 font-sans" style="color: #1D1B1D;">{brand.title}</h2>
+                    <h2 class="text-2xl font-normal mb-3 font-sans" style="color: #1D1B1D;">{brand.title}</h2>
                     <div>
-                      <label for="act-marcas" class="block text-sm font-medium text-gray-700 mb-2 font-sans">{brandField.label}</label>
+                      {brandField.label && <label for="act-marcas" class="block text-sm font-medium text-gray-700 mb-2 font-sans">{brandField.label}</label>}
                       {brandField.description && (
-                        <p class="text-xs text-gray-500 mb-2 font-sans leading-relaxed">{brandField.description}</p>
+                        <p class="text-sm text-gray-500 mb-3 font-sans leading-relaxed">{brandField.description}</p>
                       )}
-                      <textarea id="act-marcas" name="marcas" rows={5} class="w-full px-4 py-3 border-0 rounded-xl focus:bg-transparent focus:border focus:border-gray-400 focus:outline-none resize-none font-sans" style="background-color: #F5F5F5; color: #1F2937;" placeholder={brandField.placeholder}></textarea>
+                      <textarea id="act-marcas" name="marcas" rows={5} class="w-full px-4 py-3 border-0 rounded-xl focus:bg-transparent focus:border focus:border-gray-400 focus:outline-none resize-none font-sans text-sm" style="background-color: #F5F5F5; color: #1F2937;" placeholder={brandField.placeholder}></textarea>
                     </div>
                   </div>
-                  <button type="button" id="submitBtn" class="w-full bg-black hover:bg-gray-800 text-white font-medium py-3 px-6 rounded-xl transition-all duration-200 font-mono uppercase tracking-wider mt-6 flex-shrink-0">
+                  <button type="button" id="submitBtn" class="w-full bg-black hover:bg-gray-800 text-white font-medium py-3 px-6 rounded-xl transition-all duration-200 font-mono uppercase tracking-wider mt-3 flex-shrink-0">
                     {brand.submitText}
                   </button>
                 </div>
@@ -299,7 +299,6 @@ export default function ActivationForm({
                 <div id="step-5" class="hidden flex-col flex-1 min-h-0">
                   <div class="flex-1 flex items-center justify-center">
                     <div class="text-center">
-                      <div class="text-5xl mb-6">🌊</div>
                       <h2 class="text-3xl font-normal mb-6 font-sans" style="color: #1D1B1D;">{thankYou.title}</h2>
                       <div class="space-y-4" style="color: #4A4A4A;">
                         {thankYou.paragraphs?.map((p, i) => (
@@ -330,7 +329,7 @@ export default function ActivationForm({
                 <div id="step-1-m" class="flex flex-col flex-1 min-h-0">
                   <div class="flex-1 overflow-y-auto">
                     <h1 class="text-3xl font-normal mb-3 font-sans" style="color: #1D1B1D;">{intro.title}</h1>
-                    <p class="text-lg font-medium mb-4 font-sans" style="color: #1D1B1D;">{intro.subtitle}</p>
+                    {intro.subtitle && <p class="text-lg font-medium mb-4 font-sans" style="color: #1D1B1D;">{intro.subtitle}</p>}
                     <div class="space-y-3" style="color: #4A4A4A;">
                       {intro.paragraphs?.map((p, i) => (
                         <p key={i} class="text-sm leading-relaxed font-sans">{p}</p>
@@ -383,7 +382,7 @@ export default function ActivationForm({
                       {productField.description && (
                         <p class="text-xs text-gray-500 mb-2 font-sans leading-relaxed">{productField.description}</p>
                       )}
-                      <textarea id="act-produtos-m" name="produtos" rows={4} class="w-full px-4 py-3 border-0 rounded-xl focus:bg-transparent focus:border focus:border-gray-400 focus:outline-none resize-none font-sans" style="background-color: #F5F5F5; color: #1F2937;" placeholder={productField.placeholder}></textarea>
+                      <textarea id="act-produtos-m" name="produtos" rows={4} class="w-full px-4 py-3 border-0 rounded-xl focus:bg-transparent focus:border focus:border-gray-400 focus:outline-none resize-none font-sans text-sm" style="background-color: #F5F5F5; color: #1F2937;" placeholder={productField.placeholder}></textarea>
                     </div>
                   </div>
                   <button type="button" id="btn-next-3-m" class="w-full bg-black hover:bg-gray-800 text-white font-medium py-3 px-6 rounded-xl transition-all duration-200 font-mono uppercase tracking-wider mt-4 flex-shrink-0">
@@ -404,7 +403,7 @@ export default function ActivationForm({
                       {brandField.description && (
                         <p class="text-xs text-gray-500 mb-2 font-sans leading-relaxed">{brandField.description}</p>
                       )}
-                      <textarea id="act-marcas-m" name="marcas" rows={4} class="w-full px-4 py-3 border-0 rounded-xl focus:bg-transparent focus:border focus:border-gray-400 focus:outline-none resize-none font-sans" style="background-color: #F5F5F5; color: #1F2937;" placeholder={brandField.placeholder}></textarea>
+                      <textarea id="act-marcas-m" name="marcas" rows={4} class="w-full px-4 py-3 border-0 rounded-xl focus:bg-transparent focus:border focus:border-gray-400 focus:outline-none resize-none font-sans text-sm" style="background-color: #F5F5F5; color: #1F2937;" placeholder={brandField.placeholder}></textarea>
                     </div>
                   </div>
                   <button type="button" id="submitBtn-m" class="w-full bg-black hover:bg-gray-800 text-white font-medium py-3 px-6 rounded-xl transition-all duration-200 font-mono uppercase tracking-wider mt-4 flex-shrink-0">
@@ -416,7 +415,6 @@ export default function ActivationForm({
                 <div id="step-5-m" class="hidden flex-col flex-1 min-h-0">
                   <div class="flex-1 flex items-center justify-center">
                     <div class="text-center">
-                      <div class="text-4xl mb-4">🌊</div>
                       <h2 class="text-2xl font-normal mb-4 font-sans" style="color: #1D1B1D;">{thankYou.title}</h2>
                       <div class="space-y-3" style="color: #4A4A4A;">
                         {thankYou.paragraphs?.map((p, i) => (
@@ -551,12 +549,14 @@ export default function ActivationForm({
             var s = isMobile ? '-m' : '';
             var dotPrefix = isMobile ? 'step-m-' : 'step-';
 
-            // Lock card height to intro step size
+            // Lock card height — use a comfortable size based on viewport
             var card = document.getElementById(isMobile ? 'card-mobile' : 'card-desktop');
             if (card) {
               var introHeight = card.scrollHeight;
-              card.style.height = introHeight + 'px';
-              card.style.maxHeight = introHeight + 'px';
+              var vhHeight = Math.round(window.innerHeight * 0.50);
+              var finalHeight = Math.max(introHeight, vhHeight);
+              card.style.height = finalHeight + 'px';
+              card.style.maxHeight = finalHeight + 'px';
             }
 
             // Next buttons for steps 1, 2, 3
