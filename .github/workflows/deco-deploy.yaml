@@ -21,3 +21,5 @@ jobs:
 
       - name: Deco Deploy
         uses: deco-cx/deploy@v0
+        env:
+          NOTION_API_KEY: ${{ secrets.NOTION_API_KEY }}
