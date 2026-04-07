@@ -39,49 +39,7 @@ export default async function SubmitActivationAction(
       marcas: marcas.trim(),
     });
 
-    // Enviar para o Notion
-    const notionApiKey = Deno.env.get("NOTION_API_KEY");
-
-    if (notionApiKey) {
-      try {
-        const notionDatabaseId = "33b87738-37ce-800a-b980-fccc9912f6c8";
-
-        const pageData = {
-          parent: { database_id: notionDatabaseId },
-          properties: {
-            "Nome": {
-              title: [{ text: { content: nome.trim() || "N/A" } }],
-            },
-            "Email": {
-              email: email.trim().toLowerCase() || null,
-            },
-            "Produtos Sugeridos": {
-              rich_text: [{ text: { content: produtos.trim() || "N/A" } }],
-            },
-            "Marcas Sugeridas": {
-              rich_text: [{ text: { content: marcas.trim() || "N/A" } }],
-            },
-          },
-        };
-
-        const notionResponse = await fetch("https://api.notion.com/v1/pages", {
-          method: "POST",
-          headers: {
-            "Authorization": `Bearer ${notionApiKey}`,
-            "Content-Type": "application/json",
-            "Notion-Version": "2022-06-28",
-          },
-          body: JSON.stringify(pageData),
-        });
-
-        if (!notionResponse.ok) {
-          const errorText = await notionResponse.text();
-          console.error("Erro Notion API:", errorText);
-        }
-      } catch (e) {
-        console.error("Erro ao conectar com Notion:", e);
-      }
-    }
+    // Notion integration is now handled inside Convex (convex/notion.ts)
 
     return {
       success: true,

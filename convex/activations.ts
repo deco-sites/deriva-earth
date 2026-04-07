@@ -26,6 +26,14 @@ export const submitActivationForm = mutation({
       mensagem: `[ATIVAÇÃO]\n\nProdutos: ${args.produtos ?? ""}\n\nMarcas: ${args.marcas ?? ""}`,
     });
 
+    // Salvar no Notion
+    await ctx.scheduler.runAfter(0, internal.notion.saveActivationToNotion, {
+      nome: args.nome ?? "",
+      email: args.email ?? "",
+      produtos: args.produtos ?? "",
+      marcas: args.marcas ?? "",
+    });
+
     return { id };
   },
 });

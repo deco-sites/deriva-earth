@@ -16,6 +16,7 @@ import type {
 import type * as activations from "../activations.js";
 import type * as contatos from "../contatos.js";
 import type * as emails from "../emails.js";
+import type * as notion from "../notion.js";
 
 /**
  * A utility for referencing Convex functions in your app's API.
@@ -29,6 +30,7 @@ declare const fullApi: ApiFromModules<{
   activations: typeof activations;
   contatos: typeof contatos;
   emails: typeof emails;
+  notion: typeof notion;
 }>;
 export declare const api: FilterApi<
   typeof fullApi,
