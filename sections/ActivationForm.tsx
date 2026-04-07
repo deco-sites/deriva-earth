@@ -174,35 +174,20 @@ export default function ActivationForm({
   return (
     <div class="relative h-screen overflow-hidden flex flex-col" style="background-color: #1D1B1D;">
       <div class="absolute inset-0 z-0" style="background: linear-gradient(180deg, #1D1B1D 0%, #2a2528 50%, #1D1B1D 100%);">
-        <div id="bg-video-container" class="absolute inset-0 opacity-0" style="transition: opacity 1s ease-out;">
-          <video
-            class="w-full h-full object-cover"
-            autoplay
-            muted
-            loop
-            playsinline
-            poster=""
-            style="opacity: 0.3;"
-          >
+        <div id="bg-video-container" class="absolute inset-0" style="opacity: 0; transition: opacity 1s ease-out;" dangerouslySetInnerHTML={{ __html: `
+          <video id="bg-video" autoplay muted loop playsinline webkit-playsinline preload="auto" poster="" style="width:100%;height:100%;object-fit:cover;opacity:0.3;">
             <source src="https://assets.decocache.com/deriva-earth/63f76078-d3d8-46e9-8f55-bafe3c32fa6b/background2_header-(1)-(1).mp4" type="video/mp4" />
           </video>
-        </div>
+        `}} />
       </div>
 
       {/* Loading screen */}
       <div id="loading-screen" class="absolute inset-0 z-50 flex items-center justify-center" style="background-color: #1D1B1D;">
-        <div class="h-40 lg:h-48" style="mix-blend-mode: screen;">
-          <video
-            id="loading-video"
-            class="h-full w-auto"
-            autoplay
-            muted
-            playsinline
-            poster=""
-          >
+        <div class="h-40 lg:h-48" style="mix-blend-mode: screen;" dangerouslySetInnerHTML={{ __html: `
+          <video id="loading-video" autoplay muted playsinline webkit-playsinline preload="auto" poster="" style="height:100%;width:auto;">
             <source src="https://assets.decocache.com/deriva-earth/d192798e-7bb1-475b-b79d-2622051e839b/animation.mp4" type="video/mp4" />
           </video>
-        </div>
+        `}} />
       </div>
 
       <style dangerouslySetInnerHTML={{ __html: `
@@ -509,27 +494,37 @@ export default function ActivationForm({
                 bgVideo.style.opacity = '1';
               }
             }
-            // Force autoplay on mobile
+            function forcePlay(el) {
+              if (!el) return;
+              el.muted = true;
+              el.setAttribute('muted', '');
+              el.setAttribute('playsinline', '');
+              el.setAttribute('webkit-playsinline', '');
+              var p = el.play();
+              if (p && p.catch) p.catch(function() {
+                // Retry after user interaction
+                document.addEventListener('touchstart', function retry() {
+                  el.muted = true;
+                  el.play().catch(function(){});
+                  document.removeEventListener('touchstart', retry);
+                }, { once: true });
+              });
+            }
+
             var video = document.getElementById('loading-video');
             if (video) {
-              video.setAttribute('playsinline', '');
-              video.setAttribute('muted', '');
-              video.muted = true;
-              video.play().catch(function() {});
+              forcePlay(video);
               video.addEventListener('ended', dismissLoading);
               video.addEventListener('error', dismissLoading);
               setTimeout(dismissLoading, 5000);
             } else {
               dismissLoading();
             }
-            // Force autoplay on background video
-            var bgVid = document.querySelector('#bg-video-container video');
-            if (bgVid) {
-              bgVid.setAttribute('playsinline', '');
-              bgVid.setAttribute('muted', '');
-              bgVid.muted = true;
-              bgVid.play().catch(function() {});
-            }
+
+            var bgVid = document.getElementById('bg-video');
+            forcePlay(bgVid);
+            // Also try when bg becomes visible
+            setTimeout(function() { forcePlay(bgVid); }, 1500);
           })();
         `
       }} />
