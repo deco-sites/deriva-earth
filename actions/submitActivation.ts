@@ -31,7 +31,6 @@ export default async function SubmitActivationAction(
 
     const convexUrl = "https://watchful-capybara-907.convex.cloud";
     const client = new ConvexHttpClient(convexUrl);
-
     const result = await client.mutation("activations:submitActivationForm", {
       nome: nome.trim(),
       email: email.trim().toLowerCase(),
