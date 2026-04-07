@@ -71,27 +71,21 @@ export default function Header({
         `
       }} />
       {/* Video Background */}
-      <div class="absolute inset-0 z-0">
-        <video
-          class="w-full h-full object-cover"
-          autoplay
-          muted
-          loop
-          playsinline
-          poster=""
-        >
-          <source src={backgroundVideo} type="video/mp4" />
-          <p>Seu navegador não suporta o elemento de vídeo.</p>
-        </video>
-        {/* Dark overlay for better text readability */}
-        <div class="absolute inset-0 bg-black/25"></div>
-        
-        {/* Gradient overlay at bottom to blend with #1d1b1d background */}
-        <div 
-          class="absolute bottom-0 left-0 right-0 z-10" 
-          style="height: 80px; background: linear-gradient(to top, #1d1b1d 0%, rgba(29, 27, 29, 0.9) 30%, rgba(29, 27, 29, 0.6) 60%, rgba(29, 27, 29, 0.2) 85%, transparent 100%);"
-        ></div>
-      </div>
+      <div class="absolute inset-0 z-0" dangerouslySetInnerHTML={{ __html: `
+        <video id="header-bg-video" src="${backgroundVideo}" autoplay muted loop playsinline webkit-playsinline preload="auto" style="width:100%;height:100%;object-fit:cover;"></video>
+        <div style="position:absolute;inset:0;background:rgba(0,0,0,0.25);"></div>
+        <div style="position:absolute;bottom:0;left:0;right:0;z-index:10;height:80px;background:linear-gradient(to top, #1d1b1d 0%, rgba(29,27,29,0.9) 30%, rgba(29,27,29,0.6) 60%, rgba(29,27,29,0.2) 85%, transparent 100%);"></div>
+        <script>
+          (function(){
+            var v=document.getElementById('header-bg-video');
+            if(v){v.muted=true;v.play().catch(function(){});}
+            document.addEventListener('DOMContentLoaded',function(){
+              var v2=document.getElementById('header-bg-video');
+              if(v2){v2.muted=true;v2.play().catch(function(){});}
+            });
+          })();
+        </script>
+      `}} />
 
       {/* Navigation */}
       <nav class="relative z-20 container mx-auto px-6 lg:px-8">

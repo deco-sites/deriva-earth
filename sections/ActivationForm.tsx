@@ -175,18 +175,16 @@ export default function ActivationForm({
     <div class="relative h-screen overflow-hidden flex flex-col" style="background-color: #1D1B1D;">
       <div class="absolute inset-0 z-0" style="background: linear-gradient(180deg, #1D1B1D 0%, #2a2528 50%, #1D1B1D 100%);">
         <div id="bg-video-container" class="absolute inset-0" style="opacity: 0; transition: opacity 1s ease-out;" dangerouslySetInnerHTML={{ __html: `
-          <video id="bg-video" autoplay muted loop playsinline webkit-playsinline preload="auto" poster="" style="width:100%;height:100%;object-fit:cover;opacity:0.3;">
-            <source src="https://assets.decocache.com/deriva-earth/63f76078-d3d8-46e9-8f55-bafe3c32fa6b/background2_header-(1)-(1).mp4" type="video/mp4" />
-          </video>
+          <video id="bg-video" src="https://assets.decocache.com/deriva-earth/63f76078-d3d8-46e9-8f55-bafe3c32fa6b/background2_header-(1)-(1).mp4" autoplay muted loop playsinline webkit-playsinline preload="auto" style="width:100%;height:100%;object-fit:cover;opacity:0.3;"></video>
+          <script>(function(){var v=document.getElementById('bg-video');if(v){v.muted=true;v.play().catch(function(){});}})();</script>
         `}} />
       </div>
 
       {/* Loading screen */}
       <div id="loading-screen" class="absolute inset-0 z-50 flex items-center justify-center" style="background-color: #1D1B1D;">
         <div class="h-40 lg:h-48" style="mix-blend-mode: screen;" dangerouslySetInnerHTML={{ __html: `
-          <video id="loading-video" autoplay muted playsinline webkit-playsinline preload="auto" poster="" style="height:100%;width:auto;">
-            <source src="https://assets.decocache.com/deriva-earth/d192798e-7bb1-475b-b79d-2622051e839b/animation.mp4" type="video/mp4" />
-          </video>
+          <video id="loading-video" src="https://assets.decocache.com/deriva-earth/d192798e-7bb1-475b-b79d-2622051e839b/animation.mp4" autoplay muted playsinline webkit-playsinline preload="auto" style="height:100%;width:auto;"></video>
+          <script>(function(){var v=document.getElementById('loading-video');if(v){v.muted=true;v.play().catch(function(){});}})();</script>
         `}} />
       </div>
 
