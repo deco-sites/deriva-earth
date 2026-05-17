@@ -1,7 +1,7 @@
 {
   "imports": {
     "deco/": "https://cdn.jsdelivr.net/gh/deco-cx/deco@1.103.0/",
-    "apps/": "https://cdn.jsdelivr.net/gh/deco-cx/apps@0.147.0/",
+    "apps/": "https://cdn.jsdelivr.net/gh/deco-cx/apps@0.151.1/",
     "$fresh/": "https://deno.land/x/fresh@1.7.3/",
     "@cliffy/prompt": "jsr:@cliffy/prompt@^1.0.0-rc.5",
     "@core/asyncutil": "jsr:@core/asyncutil@^1.0.0",
