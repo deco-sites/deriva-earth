@@ -18,25 +18,25 @@ export default function NetworkRecoverySteps({
       id: 1,
       title: "INTERCEPTAR",
       subtitle: "Redes de pesca danificadas são recuperadas junto a comunidades pesqueiras do Rio de Janeiro, evitando que se tornem lixo ou sigam à deriva nos oceanos gerando a morte de animais.",
-      videoUrl: "https://assets.decocache.com/deriva-earth/fa7f65f1-0f77-469e-910e-b2e0940bf74c/interceptar_lp-(1).mp4"
+      videoUrl: "https://decoims.com/derivative/49f567b1-6e23-4e7c-9d22-e1af4470999e/interceptar_lp-(1).mp4"
     },
     {
       id: 2,
       title: "PRÉ-PROCESSAR", 
       subtitle: "As redes passam por um processo de triagem, classificação e limpeza, garantindo que estejam em condições ideais para serem recicladas e transformadas em Derivative®.",
-      videoUrl: "https://assets.decocache.com/deriva-earth/d634ccdf-823e-4546-a8b4-fc2f4c273074/limpandorede_lp-(1).mp4"
+      videoUrl: "https://decoims.com/derivative/0eea0ead-6223-4d78-b94c-9514f9b94540/limpandorede_lp-(1).mp4"
     },
     {
       id: 3,
       title: "TRANSFORMAR",
       subtitle: "O nylon das redes é reciclado e ganha nova vida como Derivative, uma matéria-prima de alto valor e propósito, pronta para dar origem a produtos que carregam inovação e impacto.",
-      videoUrl: "https://assets.decocache.com/deriva-earth/59a2e9b5-f368-454c-88c7-45f787d91ce4/transformar_lp-(1).mp4"
+      videoUrl: "https://decoims.com/derivative/0f3f36e6-d834-4251-86fe-c57ecf80cdd9/transformar_lp-(1).mp4"
     },
     {
       id: 4,
       title: "COLLAB",
       subtitle: "Marcas comprometidas com impacto positivo usam nosso material para criar produtos sustentáveis, de alto valor e propósito, ampliando o ciclo de regeneração dos oceanos.",
-      videoUrl: "https://assets.decocache.com/deriva-earth/22337cd0-9767-4d20-983d-e688bc5f12e7/collab_lp-(1).mp4"
+      videoUrl: "https://decoims.com/derivative/fd558c5f-c0d3-4d9a-bb0c-5d9a02f8351f/collab_lp-(1).mp4"
     }
   ],
   stepDuration = 12 // 12 segundos por etapa
@@ -433,13 +433,13 @@ function StepsProgress({ totalSteps, stepDuration }: { totalSteps: number; stepD
   // Ícones para cada etapa (usando URLs externas)
   const stepIcons = [
     // INTERCEPTAR - Rede de pesca (ícone de grade)
-    `<img src="https://assets.decocache.com/derivative/0b024ea2-1cec-4df8-b13a-bbdc0c19cecb/grid_4x4_520dp_F7F7F7_FILL0_wght400_GRAD0_opsz48.svg" width="20" height="20" alt="Interceptar" />`,
+    `<img src="https://decoims.com/derivative/4e2e6ab5-b751-431f-947e-d5e10954410c/grid_4x4_520dp_F7F7F7_FILL0_wght400_GRAD0_opsz48.svg" width="20" height="20" alt="Interceptar" />`,
     // PRÉ-PROCESSAR - Triagem/Classificação (ícone de gota d'água)
-    `<img src="https://assets.decocache.com/derivative/f5216741-1b7d-44b7-a8e2-e4adc4546373/water_drop_520dp_F7F7F7_FILL0_wght400_GRAD0_opsz48.svg" width="20" height="20" alt="Pré-processar" />`,
+    `<img src="https://decoims.com/derivative/d9cd1fe4-7aa5-4afd-8930-ba471f8368bf/water_drop_520dp_F7F7F7_FILL0_wght400_GRAD0_opsz48.svg" width="20" height="20" alt="Pré-processar" />`,
     // TRANSFORMAR - Reciclagem (ícone de ciclo)
-    `<img src="https://assets.decocache.com/derivative/90d1dccf-8be5-45ef-8e34-da10ed116cc9/cycle_520dp_F7F7F7_FILL0_wght400_GRAD0_opsz48.svg" width="20" height="20" alt="Transformar" />`,
+    `<img src="https://decoims.com/derivative/be41ec63-62af-4d23-bf18-b0384f91d8d9/cycle_520dp_F7F7F7_FILL0_wght400_GRAD0_opsz48.svg" width="20" height="20" alt="Transformar" />`,
     // COLLAB - Colaboração/Empresas (ícone de design services)
-    `<img src="https://assets.decocache.com/derivative/a0a6b7f8-cc97-4b8a-b53a-4d6afa5f1d05/design_services_520dp_F7F7F7_FILL0_wght400_GRAD0_opsz48.svg" width="20" height="20" alt="Collab" />`
+    `<img src="https://decoims.com/derivative/29d68450-5031-4394-91b8-e3a517b466d0/design_services_520dp_F7F7F7_FILL0_wght400_GRAD0_opsz48.svg" width="20" height="20" alt="Collab" />`
   ];
 
   return (

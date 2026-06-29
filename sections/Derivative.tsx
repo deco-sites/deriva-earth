@@ -12,26 +12,26 @@ export default function Derivative({
   subtitle = "Material que nasce da união de redes de pesca interceptadas e de resíduos têxteis pré-consumo",
   keyBenefits = [
     {
-      icon: "https://assets.decocache.com/derivative/59a05c46-dd77-42a0-b6d5-d8cdf3244268/Frame-(1).svg",
+      icon: "https://decoims.com/derivative/685a9510-b5b9-42b7-a811-24547d242e17/Frame-(1).svg",
       text: "Novo destino para ameaças ambientais"
     },
     {
-      icon: "https://assets.decocache.com/deriva-earth/8ff1b507-75a3-4fb8-9f32-cd11b53232f3/materialunico.svg",
+      icon: "https://decoims.com/derivative/01ee4432-19da-48db-a9d7-974355e7e823/materialunico.svg",
       text: "Material único no Brasil"
     },
     {
-      icon: "https://assets.decocache.com/deriva-earth/c18b8c43-a056-436b-8561-b1ff3a0609d8/cadeiarastreavel.svg",
+      icon: "https://decoims.com/derivative/558e2d3a-9449-48a6-b97e-d13a31c9401b/cadeiarastreavel.svg",
       text: "Cadeia rastreável"
     }
   ]
 }: Props) {
   return (
     <div id="derivative" style="background-color: #1d1b1d; min-height: 100vh;">
-      <section class="relative py-20 lg:py-32 mx-4 lg:mx-8" style="background-color: #fcfafc; border-radius: 24px; overflow: hidden; background-image: url('https://assets.decocache.com/derivative/59fbafa1-c394-4fac-a866-06ea2cad64a8/background_nets.svg'); background-size: cover; background-position: center; background-repeat: no-repeat;">
+      <section class="relative py-20 lg:py-32 mx-4 lg:mx-8" style="background-color: #fcfafc; border-radius: 24px; overflow: hidden; background-image: url('https://decoims.com/derivative/501560d3-8338-472a-a8f1-08bfb83975da/background_nets.svg'); background-size: cover; background-position: center; background-repeat: no-repeat;">
       {/* Background Pattern */}
       <div class="absolute inset-0 opacity-15">
         <img 
-          src="https://assets.decocache.com/derivative/59fbafa1-c394-4fac-a866-06ea2cad64a8/background_nets.svg" 
+          src="https://decoims.com/derivative/501560d3-8338-472a-a8f1-08bfb83975da/background_nets.svg" 
           alt="Net pattern background"
           class="w-full h-full object-cover object-center"
         />
@@ -159,7 +159,7 @@ export default function Derivative({
           {/* Seta 1 - Resíduos → Matéria-prima */}
           <div class="flex items-center justify-center">
             <img 
-              src="https://assets.decocache.com/derivative/3d40778e-d8d1-47f1-925d-9ba8717d50d8/Arrow-1.svg" 
+              src="https://decoims.com/derivative/7395412c-a215-48b9-913d-10879636a968/Arrow-1.svg" 
               alt="Fluxo para Matéria-prima"
               style="width: 40px; height: 40px; transform: rotate(0deg);"
             />
@@ -182,7 +182,7 @@ export default function Derivative({
           {/* Seta 2 - Matéria-prima → Produtos */}
           <div class="flex items-center justify-center">
             <img 
-              src="https://assets.decocache.com/derivative/3d40778e-d8d1-47f1-925d-9ba8717d50d8/Arrow-1.svg" 
+              src="https://decoims.com/derivative/7395412c-a215-48b9-913d-10879636a968/Arrow-1.svg" 
               alt="Fluxo para Produtos"
               style="width: 40px; height: 40px; transform: rotate(0deg);"
             />
@@ -211,7 +211,7 @@ export default function Derivative({
                 playsinline
                 preload="metadata"
               >
-                <source src="https://assets.decocache.com/deriva-earth/38f16cea-93f3-46c6-bafd-84f346a83b8d/video_oculos-(1).mp4" type="video/mp4" />
+                <source src="https://decoims.com/derivative/b91244ab-9474-4cfb-8fd5-3655ebad92f2/video_oculos-(1).mp4" type="video/mp4" />
                 Seu navegador não suporta vídeos.
               </video>
               
@@ -225,7 +225,7 @@ export default function Derivative({
                 playsinline
                 preload="metadata"
               >
-                <source src="https://assets.decocache.com/deriva-earth/98dc3f18-1007-4ea2-8c3b-755d4d77590a/social_u4548274989_3d_modern_sportive_wristwatch_product_wireframe_f_4f8b60f9-d119-488d-841e-0ef23cb596d4_3-(1).mp4" type="video/mp4" />
+                <source src="https://decoims.com/derivative/fb947ca0-9c19-48e8-ad06-95cb3c27c26a/social_u4548274989_3d_modern_sportive_wristwatch_product_wireframe_f_4f8b60f9-d119-488d-841e-0ef23cb596d4_3-(1).mp4" type="video/mp4" />
                 Seu navegador não suporta vídeos.
               </video>
               
@@ -273,7 +273,7 @@ export default function Derivative({
             {/* Seta 1 - Resíduos → Matéria-prima */}
             <div class="flex items-center justify-center">
               <img 
-                src="https://assets.decocache.com/derivative/3d40778e-d8d1-47f1-925d-9ba8717d50d8/Arrow-1.svg" 
+                src="https://decoims.com/derivative/7395412c-a215-48b9-913d-10879636a968/Arrow-1.svg" 
                 alt="Fluxo para Matéria-prima"
                 style="width: 30px; height: 30px; transform: rotate(90deg);"
               />
@@ -296,7 +296,7 @@ export default function Derivative({
             {/* Seta 2 - Matéria-prima → Produtos */}
             <div class="flex items-center justify-center">
               <img 
-                src="https://assets.decocache.com/derivative/3d40778e-d8d1-47f1-925d-9ba8717d50d8/Arrow-1.svg" 
+                src="https://decoims.com/derivative/7395412c-a215-48b9-913d-10879636a968/Arrow-1.svg" 
                 alt="Fluxo para Produtos"
                 style="width: 30px; height: 30px; transform: rotate(90deg);"
               />
@@ -330,7 +330,7 @@ export default function Derivative({
                   controlslist="nodownload nofullscreen noremoteplayback"
                   disableRemotePlayback
                 >
-                  <source src="https://assets.decocache.com/deriva-earth/38f16cea-93f3-46c6-bafd-84f346a83b8d/video_oculos-(1).mp4" type="video/mp4" />
+                  <source src="https://decoims.com/derivative/b91244ab-9474-4cfb-8fd5-3655ebad92f2/video_oculos-(1).mp4" type="video/mp4" />
                   Seu navegador não suporta vídeos.
                 </video>
                 
@@ -349,7 +349,7 @@ export default function Derivative({
                   controlslist="nodownload nofullscreen noremoteplayback"
                   disableRemotePlayback
                 >
-                  <source src="https://assets.decocache.com/deriva-earth/98dc3f18-1007-4ea2-8c3b-755d4d77590a/social_u4548274989_3d_modern_sportive_wristwatch_product_wireframe_f_4f8b60f9-d119-488d-841e-0ef23cb596d4_3-(1).mp4" type="video/mp4" />
+                  <source src="https://decoims.com/derivative/fb947ca0-9c19-48e8-ad06-95cb3c27c26a/social_u4548274989_3d_modern_sportive_wristwatch_product_wireframe_f_4f8b60f9-d119-488d-841e-0ef23cb596d4_3-(1).mp4" type="video/mp4" />
                   Seu navegador não suporta vídeos.
                 </video>
                 
