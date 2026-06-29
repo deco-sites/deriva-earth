@@ -176,11 +176,11 @@ export default function ActivationForm({
       <div class="absolute inset-0 z-0" style="background: linear-gradient(180deg, #1D1B1D 0%, #2a2528 50%, #1D1B1D 100%);">
         {/* Mobile: static background image */}
         <div id="bg-image-container" class="absolute inset-0 lg:hidden" style="opacity: 0; transition: opacity 1s ease-out;">
-          <img src="https://assets.decocache.com/deriva-earth/5ce777c7-bded-40fd-9c88-7d6fb056f8ac/fundo.png" alt="" style="width:100%;height:100%;object-fit:cover;opacity:0.9;" />
+          <img src="https://decoims.com/derivative/a91bdc33-162e-4897-8097-319fdf21ee0b/fundo.png" alt="" style="width:100%;height:100%;object-fit:cover;opacity:0.9;" />
         </div>
         {/* Desktop: background video */}
         <div id="bg-video-container" class="absolute inset-0 hidden lg:block" style="opacity: 0; transition: opacity 1s ease-out;" dangerouslySetInnerHTML={{ __html: `
-          <video id="bg-video" src="https://assets.decocache.com/deriva-earth/63f76078-d3d8-46e9-8f55-bafe3c32fa6b/background2_header-(1)-(1).mp4" autoplay muted loop playsinline webkit-playsinline preload="auto" style="width:100%;height:100%;object-fit:cover;opacity:0.3;"></video>
+          <video id="bg-video" src="https://decoims.com/derivative/70d29294-21ef-4650-b699-4ecbe3c9e41e/background2_header-(1)-(1).mp4" autoplay muted loop playsinline webkit-playsinline preload="auto" style="width:100%;height:100%;object-fit:cover;opacity:0.3;"></video>
           <script>(function(){var v=document.getElementById('bg-video');if(v){v.muted=true;v.play().catch(function(){});}})();</script>
         `}} />
       </div>
@@ -188,7 +188,7 @@ export default function ActivationForm({
       {/* Loading screen */}
       <div id="loading-screen" class="absolute inset-0 z-50 flex items-center justify-center" style="background-color: #1D1B1D; padding-bottom: 15vh;">
         <div class="h-40 lg:h-48" style="mix-blend-mode: screen;">
-          <img id="loading-gif" src="https://assets.decocache.com/deriva-earth/82ec37fa-e57d-4e56-ac80-f12eea23b03d/animation-ezgif.com-video-to-gif-converter.gif" alt="Loading" style="height: 100%; width: auto;" />
+          <img id="loading-gif" src="https://decoims.com/derivative/182974ae-1485-4680-b42c-ac6a2c278f4a/animation-ezgif.com-video-to-gif-converter.gif" alt="Loading" style="height: 100%; width: auto;" />
         </div>
       </div>
 
@@ -443,11 +443,11 @@ export default function ActivationForm({
         <div class="container mx-auto px-4 py-6">
           <div class="hidden md:flex md:flex-row items-center justify-between gap-4">
             <div class="flex-shrink-0">
-              <img src="https://assets.decocache.com/derivative/63f2145a-4b99-403e-ba27-cf49104ea963/logo_deriva_horizontal_NO.svg" alt="Deriva Logo" class="h-8 w-auto" />
+              <img src="https://decoims.com/derivative/c00a5740-7a7a-48e5-b61a-3749780baf8f/logo_deriva_horizontal_NO.svg" alt="Deriva Logo" class="h-8 w-auto" />
             </div>
             <div class="flex items-center gap-6">
               <a href="https://www.instagram.com/deriva_co?igsh=eWl4anFkc3JkYzBh" target="_blank" rel="noopener noreferrer" class="text-white hover:text-gray-300 transition-colors">
-                <img src="https://assets.decocache.com/derivative/44409299-5cf2-4846-88aa-ed7a5e4c31da/insta.svg" alt="Instagram" class="w-6 h-6" />
+                <img src="https://decoims.com/derivative/c0c8a74e-844d-43dc-80d6-d9eafb95be2f/insta.svg" alt="Instagram" class="w-6 h-6" />
               </a>
               <a href="https://www.linkedin.com/company/deriva-earth" target="_blank" rel="noopener noreferrer" class="text-white hover:text-gray-300 transition-colors">
                 <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
@@ -457,11 +457,11 @@ export default function ActivationForm({
           </div>
           <div class="flex md:hidden items-center justify-between gap-2">
             <div class="flex-shrink-0">
-              <img src="https://assets.decocache.com/derivative/63f2145a-4b99-403e-ba27-cf49104ea963/logo_deriva_horizontal_NO.svg" alt="Deriva Logo" class="h-6 w-auto" />
+              <img src="https://decoims.com/derivative/c00a5740-7a7a-48e5-b61a-3749780baf8f/logo_deriva_horizontal_NO.svg" alt="Deriva Logo" class="h-6 w-auto" />
             </div>
             <div class="flex items-center gap-4">
               <a href="https://www.instagram.com/deriva_co?igsh=eWl4anFkc3JkYzBh" target="_blank" rel="noopener noreferrer" class="text-white hover:text-gray-300 transition-colors">
-                <img src="https://assets.decocache.com/derivative/44409299-5cf2-4846-88aa-ed7a5e4c31da/insta.svg" alt="Instagram" class="w-5 h-5" />
+                <img src="https://decoims.com/derivative/c0c8a74e-844d-43dc-80d6-d9eafb95be2f/insta.svg" alt="Instagram" class="w-5 h-5" />
               </a>
               <a href="https://www.linkedin.com/company/deriva-earth" target="_blank" rel="noopener noreferrer" class="text-white hover:text-gray-300 transition-colors">
                 <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>

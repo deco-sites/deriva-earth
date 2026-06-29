@@ -15,27 +15,27 @@ export interface Props {
 const DEFAULT_SUPPORTERS: Supporter[] = [
   {
     name: "Apoio Financeiro 1",
-    logo: "https://assets.decocache.com/derivative/24d0358a-2704-48df-8eed-ba90dfb9d704/Frame-2147224243.svg"
+    logo: "https://decoims.com/derivative/ca0ac2b7-0930-469a-b07f-4004373f5240/Frame-2147224243.svg"
   },
   {
     name: "Apoio Financeiro 2", 
-    logo: "https://assets.decocache.com/derivative/9d61a3e1-1f85-4424-b36b-f7d2d79cbaa0/b3svg.svg"
+    logo: "https://decoims.com/derivative/d3291a1c-c38f-4d88-9309-5e36ee38a9ab/b3svg.svg"
   },
   {
     name: "Genesis",
-    logo: "https://assets.decocache.com/derivative/8d180754-e548-4bc9-b808-9eaaa57c2fa9/genesis.svg"
+    logo: "https://decoims.com/derivative/53218e46-3bcc-4806-b2f0-ab8604f14898/genesis.svg"
   },
   {
     name: "Artemisia",
-    logo: "https://assets.decocache.com/derivative/646a5d40-efdb-4db5-853b-6bcfa94cb432/artemisia.svg"
+    logo: "https://decoims.com/derivative/2914b3aa-c94b-4df3-a02c-04473eef04ad/artemisia.svg"
   },
   {
     name: "Route",
-    logo: "https://assets.decocache.com/derivative/7f44d50f-42a4-4ef7-b2ba-28f644a3e031/route.svg"
+    logo: "https://decoims.com/derivative/c4585bde-9546-410b-adba-c4deb2fdee6c/route.svg"
   },
   {
     name: "Deco",
-    logo: "https://assets.decocache.com/derivative/4cf402dd-a4d0-4fc4-9dc8-317e3178cccb/deco.svg"
+    logo: "https://decoims.com/derivative/77823763-8cbe-482b-94f4-abf4b9328b38/deco.svg"
   }
 ];
 

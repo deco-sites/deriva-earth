@@ -43,7 +43,7 @@ export interface Props {
 export default function Footer({
   logo = {
     src:
-      "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/1527/67120bcd-936a-4ea5-a760-02ed5c4a3d04",
+      "https://decoims.com/derivative/045ad560-4b43-4b33-9f49-a3faf656ff4a/67120bcd-936a-4ea5-a760-02ed5c4a3d04.svg",
     alt: "Logo",
   },
   links = [
@@ -88,7 +88,7 @@ export default function Footer({
   madeWith = {
     label: "Made with",
     src:
-      "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/1527/cc202be0-af57-4b32-b9c9-d1d7dc97bf85",
+      "https://decoims.com/derivative/e4aec3f3-dc7b-4579-9b51-85ca32830371/cc202be0-af57-4b32-b9c9-d1d7dc97bf85.svg",
     href: "https://deco.cx",
   },
   copyright = "© 2024 deco.cx. All rights reserved.",

@@ -37,7 +37,7 @@ const lineStyles = [
 
 export default function Header({
   logo = {
-    src: "https://assets.decocache.com/derivative/63f2145a-4b99-403e-ba27-cf49104ea963/logo_deriva_horizontal_NO.svg",
+    src: "https://decoims.com/derivative/c00a5740-7a7a-48e5-b61a-3749780baf8f/logo_deriva_horizontal_NO.svg",
     alt: "Deriva",
   },
   navigation = {
@@ -48,7 +48,7 @@ export default function Header({
       { label: "MISSÃO", url: "#mission" },
     ],
   },
-  backgroundVideo = "https://assets.decocache.com/deriva-earth/63f76078-d3d8-46e9-8f55-bafe3c32fa6b/background2_header-(1)-(1).mp4",
+  backgroundVideo = "https://decoims.com/derivative/70d29294-21ef-4650-b699-4ecbe3c9e41e/background2_header-(1)-(1).mp4",
   title = "REGENERANDO O OCEANO, TRANSFORMANDO MARCAS",
   ctaButton = {
     id: "cta-movement",
@@ -405,7 +405,7 @@ export default function Header({
                 </svg>
               </button>
               <img 
-                src="https://assets.decocache.com/derivative/5f15ed8f-d966-4a9b-b620-990282e029f0/3-(6).jpg"
+                src="https://decoims.com/derivative/46dd251c-ab89-4cd0-b402-583568fb2502/3-(6).jpg"
                 alt="Deriva"
                 class="w-full h-full object-cover"
               />

@@ -27,12 +27,12 @@ export default function Mission({
     <div id="mission" style="background-color: #1d1b1d;">
       <section 
         class="relative mx-4 lg:mx-8 py-20 lg:py-32" 
-        style="background-color: #fcfafc; border-radius: 24px; overflow: hidden; background-image: url('https://assets.decocache.com/derivative/6ea633f1-547f-4478-89c0-97356b6354a9/blue-texture.svg'); background-size: cover; background-position: center; background-repeat: no-repeat;"
+        style="background-color: #fcfafc; border-radius: 24px; overflow: hidden; background-image: url('https://decoims.com/derivative/4f18255b-4014-428f-b552-6bfae53c4651/blue-texture.svg'); background-size: cover; background-position: center; background-repeat: no-repeat;"
       >
         {/* Background Pattern */}
         <div class="absolute inset-0 opacity-15">
           <img 
-            src="https://assets.decocache.com/derivative/6ea633f1-547f-4478-89c0-97356b6354a9/blue-texture.svg" 
+            src="https://decoims.com/derivative/4f18255b-4014-428f-b552-6bfae53c4651/blue-texture.svg" 
             alt="Blue texture background"
             class="w-full h-full object-cover object-center"
           />

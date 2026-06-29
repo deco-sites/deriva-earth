@@ -11,7 +11,7 @@ export default function ContactFormHybrid({
     <div class="relative min-h-screen">
       {/* Imagem de fundo simples */}
       <img 
-        src="https://assets.decocache.com/derivative/9c51b37a-0a0b-41e8-bebc-98bea5946f87/Jubarte-I-(1).jpg"
+        src="https://decoims.com/derivative/e3cc05d0-af74-4a93-b85e-ec9dc6378053/Jubarte-I-(1).jpg"
         alt="Background"
         class="absolute inset-0 w-full h-full object-cover z-0"
       />
@@ -190,7 +190,7 @@ export default function ContactFormHybrid({
             {/* Logo à esquerda */}
             <div class="flex-shrink-0">
               <img 
-                src="https://assets.decocache.com/derivative/63f2145a-4b99-403e-ba27-cf49104ea963/logo_deriva_horizontal_NO.svg"
+                src="https://decoims.com/derivative/c00a5740-7a7a-48e5-b61a-3749780baf8f/logo_deriva_horizontal_NO.svg"
                 alt="Deriva Logo"
                 class="h-8 w-auto"
               />
@@ -205,7 +205,7 @@ export default function ContactFormHybrid({
                 class="text-white hover:text-gray-300 transition-colors"
               >
                 <img 
-                  src="https://assets.decocache.com/derivative/44409299-5cf2-4846-88aa-ed7a5e4c31da/insta.svg"
+                  src="https://decoims.com/derivative/c0c8a74e-844d-43dc-80d6-d9eafb95be2f/insta.svg"
                   alt="Instagram"
                   class="w-6 h-6"
                 />
@@ -234,7 +234,7 @@ export default function ContactFormHybrid({
             {/* Logo */}
             <div class="flex-shrink-0">
               <img 
-                src="https://assets.decocache.com/derivative/63f2145a-4b99-403e-ba27-cf49104ea963/logo_deriva_horizontal_NO.svg"
+                src="https://decoims.com/derivative/c00a5740-7a7a-48e5-b61a-3749780baf8f/logo_deriva_horizontal_NO.svg"
                 alt="Deriva Logo"
                 class="h-6 w-auto"
               />
@@ -249,7 +249,7 @@ export default function ContactFormHybrid({
                 class="text-white hover:text-gray-300 transition-colors"
               >
                 <img 
-                  src="https://assets.decocache.com/derivative/44409299-5cf2-4846-88aa-ed7a5e4c31da/insta.svg"
+                  src="https://decoims.com/derivative/c0c8a74e-844d-43dc-80d6-d9eafb95be2f/insta.svg"
                   alt="Instagram"
                   class="w-5 h-5"
                 />
